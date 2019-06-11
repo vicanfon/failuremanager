@@ -18,7 +18,7 @@
    },
    "devDependencies": {},
    "scripts": {
-      "boot": "npm install && cd views/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/vapp12/\" --base-href=\"/vapp12/\" ",
+      "boot": "npm install && cd frontend/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/vapp12/\" --base-href=\"/vapp12/\" ",
       "start": "node ./bin/be/index.js"
    },
    "author": "vfos",

@@ -24,10 +24,10 @@ app.get('/api/sayhello', function(req,res,next){
 //API ROUTES SHOULD BE PLACED HERE - END *****
 
 //serve angular static folder
-app.use(express.static(path.join(path.normalize(__dirname), '../../views/failuremanager/dist/failuremanager')));
+app.use(express.static(path.join(path.normalize(__dirname), '../../frontend/failuremanager/dist/failuremanager')));
 //Serve Angular app - let the Angular decide every what to do with every route by using '*'
 app.get('*', function(req,res){
-	res.sendFile('index.html', {root: path.join(path.normalize(__dirname), '../../views/failuremanager/dist/failuremanager')});
+	res.sendFile('index.html', {root: path.join(path.normalize(__dirname), '../../frontend/failuremanager/dist/failuremanager')});
 })
 
 
