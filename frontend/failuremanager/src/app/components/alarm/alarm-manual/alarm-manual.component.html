@@ -1,0 +1,46 @@
+<form (ngSubmit)="createAlarm(f)" #f="ngForm">
+  <div class="row">
+    <h3> New Manual Alarm </h3>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <span for="timestamp">Timestamp</span>
+      <input type="text" id="timestamp" name="timestamp" ngModel="{{timestamp | date:'medium'}}" readonly>
+    </div>
+    <div class="form-group col-md-6">
+      <span for="status">Status</span>
+      <input type="text" id="status" name="status" ngModel="Validated" readonly>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <span for="machine">Machine</span><tr></tr>
+      <p-dropdown name='machine' [options]="machines" [(ngModel)]="selectedMachine" placeholder="Select a machine" optionLabel="name" [showClear]="true"></p-dropdown>
+    </div>
+    <div class="form-group col-md-3">
+      <span for="code">Alarm Code</span><tr></tr>
+      <p-dropdown name="code" [options]="codes" [(ngModel)]="selectedCode" placeholder="Select a code" optionLabel="code" [showClear]="true"></p-dropdown>
+      <!--<input type="text" id="code" name="code">-->
+    </div>
+    <!--<div *ngIf="authService.getCompany()=='mass'" class="form-group col-md-6">
+      <span for="type">Type</span><tr></tr>
+      <p-dropdown  name="type" [options]="types" [(ngModel)]="selectedType" placeholder="Select a type" optionLabel="name" [showClear]="true"></p-dropdown>
+    </div>-->
+    <div class="form-group col-md-6">
+      <span for="name">Name</span>
+    <input ngModel type="text" id="name" name="name" value="{{selectedCode ? selectedCode.name: ''}}" readonly>
+  </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <span for="origin">Origin</span>
+      <input type="text" id="origin" name="origin" ngModel="Manual" readonly>
+    </div>
+    <div class="form-group col-md-9">
+      <span for="comment">Comment:</span>
+      <textarea ngModel style="height: 100px;" id="comment" name="comment"></textarea>
+    </div>
+  </div>
+  <button class="btn btn-primary blue" type="submit">Create</button>
+  <a class="btn btn-primary" routerLink="/alarms">Cancel</a>
+</form>

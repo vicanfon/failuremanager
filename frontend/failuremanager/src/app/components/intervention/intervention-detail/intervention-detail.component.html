@@ -1,0 +1,34 @@
+<form #f="ngForm">
+  <!--<div class="row">
+    <button class="btn grey"(click)="goBack()">go back</button>
+  </div>-->
+  <div class="row">
+    <h3>Intervention details</h3>
+    <button class="btn btn-primary" type="submit" *ngIf="authService.getRole()!='mass' && intervention.status!='closed'" (click)="acceptIntervention(f)">Accept</button>
+    <button class="btn btn-primary red" type="submit" *ngIf="authService.getRole()!='mass' && intervention.status!='closed'" (click)="rejectIntervention(f)">Reject</button>
+    <button class="btn blue" type="submit" (click)="editIntervention(f)">Save</button>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-3">
+      <span for="timestamp">Timestamp</span>
+      <input type="text" id="timestamp" name="timestamp" [value]="intervention.timestamp" readonly>
+    </div>
+    <div class="form-group col-md-3">
+      <span for="duration">Duration</span>
+      <input type="text" id="duration" name="duration" [(ngModel)]="intervention.duration" readonly>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <span for="solution">Solution</span>
+      <textarea type="text" id="solution" name="solution" style="height: 100px" [(ngModel)]="intervention.solution" [readonly]="authService.getCompany()!='mass'"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-md-12">
+      <span for="comment">Comment</span>
+      <textarea type="text" id="comment" name="comment" style="height: 100px" [(ngModel)]="intervention.comment" [readonly]="authService.getCompany()=='mass'"></textarea>
+    </div>
+  </div>
+
+</form>
