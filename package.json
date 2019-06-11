@@ -18,7 +18,7 @@
    },
    "devDependencies": {},
    "scripts": {
-      "boot": "npm install && cd views/vApp12 && npm install && ng build --prod --aot --deploy-url=\"/failuremanager/\" --base-href=\"/failuremanager/\" ",
+      "boot": "npm install && cd views/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/failuremanager/\" --base-href=\"/failuremanager/\" ",
       "start": "PORT=4201 node ./bin/be/index.js"
    },
    "author": "vfos",

@@ -6,8 +6,8 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . .
-
-RUN npm install
+RUN apk add --no-cache bash
+RUN npm boot
 
 EXPOSE 4201
 

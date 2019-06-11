@@ -15,6 +15,13 @@ app.use(cookieParser());
 //app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressValidator());
 
+//API ROUTES SHOULD BE PLACED HERE - START *****
+app.get('/api/sayhello', function(req,res,next){
+    res.status(200).json( {
+        message: "hello from API"
+    })
+})
+//API ROUTES SHOULD BE PLACED HERE - END *****
 
 //serve angular static folder
 app.use(express.static(path.join(path.normalize(__dirname), '../../views/failuremanager/dist/failuremanager')));
@@ -23,9 +30,7 @@ app.get('*', function(req,res){
 	res.sendFile('index.html', {root: path.join(path.normalize(__dirname), '../../views/failuremanager/dist/failuremanager')});
 })
 
-app.get('/api/sayhello', function(req,res,next){ res.status(200).json( {
-    message: "hello from API"
-}))
+
 
 //app.use('/', express.static(path.join(path.normalize(__dirname), '../../views')));
 
@@ -56,7 +61,7 @@ app.use(function(req, res, next) {
 /**
  * welcome backend route
 */
-app.get('/', (req, res) => {
+/*app.get('/', (req, res) => {
   res.json({
       message : 'vApp backend is running',
       data: new Date()
@@ -80,5 +85,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+*/
 module.exports = app;
