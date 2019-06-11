@@ -1,13 +1,13 @@
 FROM node:alpine
 
-ENV ASSET_NAME="failuremanager"
+ENV ASSET_NAME="vapp12"
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . .
 RUN apk add --no-cache bash
-RUN npm boot
+RUN npm run boot
 
 EXPOSE 4201
 
