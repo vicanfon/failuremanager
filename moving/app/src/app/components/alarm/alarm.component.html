@@ -1,0 +1,60 @@
+<div>
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Last alarms</h2>
+      <h5>Select one row to get more details:</h5>
+    </div>
+    <div class="col-md-8 text-right">
+      <a *ngIf="authService.getCompany()!='mass'" class="btn btn-primary" routerLink="/createAlarm">Create Alarm</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <p-table #dt (onRowSelect)="show($event)" [columns]="cols" [value]="alarms" selectionMode="single" [responsive]="true" [(selection)]="selectedAlarm" [paginator]="true" [rows]="5">
+        <ng-template pTemplate="caption">
+          <div style="text-align: right">
+            <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+            <input type="text" pInputText size="50" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+          </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+              {{col.header}}
+              <p-sortIcon [field]="col.field" ariaLabel="Activate to sort" ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order"></p-sortIcon>
+            </th>
+          </tr>
+          <tr>
+            <th *ngFor="let col of columns" [ngSwitch]="col.field">
+              <input style="width: 100%" *ngSwitchCase="'status'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'code'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'name'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'type'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'machine'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'company'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+              <input style="width: 100%" *ngSwitchCase="'origin'" pInputText type="text" (input)="dt.filter($event.target.value, col.field, col.filterMatchMode)">
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-alarm>
+          <tr [pSelectableRow]="alarm">
+            <td>{{alarm.timestamp | date:'medium'}}</td>
+            <td>{{alarm.status}}</td>
+            <td>{{alarm.code}}</td>
+            <td>{{alarm.name}}</td>
+            <td>{{alarm.type}}</td>
+            <td>{{alarm.machine}}</td>
+            <td>{{alarm.company}}</td>
+            <td>{{alarm.origin}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <!--<div class="col-md-4">
+      <app-alarm-detail [alarm]="selectedAlarm"></app-alarm-detail>
+    </div>-->
+  </div>
+  <!--<p-sidebar [(visible)]="display" position="right" styleClass="ui-sidebar-md">
+    <app-alarm-manual></app-alarm-manual>
+  </p-sidebar>-->
+</div>
