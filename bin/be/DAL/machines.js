@@ -4,6 +4,7 @@ const storage = require("./storageRequester");
 
 module.exports = {
     get: function (cb) {
+        console.log("getting here");
         storage('GET', "/tables/machines/rows", {}, function (error, response, body) {
             if (!error) {
                 if (response.statusCode == 200) {
