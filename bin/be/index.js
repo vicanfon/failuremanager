@@ -1,5 +1,20 @@
 #!/usr/bin/env node
 
+
+/**
+ * Module dependencies.
+ */
+var dal = require('./DAL');
+
+/**
+ * Fixing things
+ */
+var path = require('path');
+var baseDir = require('app-root-path').path;
+require('app-module-path')
+    .addPath(baseDir);
+
+
 /**
  * Module dependencies.
  */
@@ -88,4 +103,83 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   console.log('Listening on ' + bind);
+}
+
+/**
+ * DB population check
+ */
+
+function init() {
+  console.log("Checking DB...")
+  dal.init.dbExists(function (exists) {
+    if (exists) {
+      console.log("OK")
+      console.log("Checking tables...")
+      dal.init.tablesExistsAndCreates(function (tablesdone) {
+        if (tablesdone) {
+          console.log("Checking tables - DONE")
+          console.log("Checking views...");
+          dal.init.viewsExistsAndCreates(function (viewsdone) {
+            if (viewsdone) {
+              console.log("Checking views - DONE");
+              console.log("Checking roles...");
+              dal.init.checkRoles(function (rolesExist) {
+                if (rolesExist) {
+                  console.log("Checking roles - DONE");
+                } else {
+                  console.log("Creating roles...");
+                  dal.init.createRoles(function (rolesdone) {
+                    if (rolesdone) {
+                      console.log("Creating roles - DONE")
+                    } else {
+                      console.log("NOT IMPLEMENTED :(")
+                    }
+                  })
+                }
+              })
+
+            } else {
+              console.log("NOT IMPLEMENTED :(")
+              console.log("Creating roles...");
+              dal.init.createRoles(function (rolesdone) {
+                if (rolesdone) {
+                  console.log("Creating roles - DONE")
+                } else {
+                  console.log("NOT IMPLEMENTED :(")
+                }
+              })
+            }
+          })
+        } else {
+          console.log("NOT IMPLEMENTED :(")
+        }
+      })
+    } else {
+      console.log("DB does not exist");
+      console.log("Creating DB");
+      dal.init.createDB(function (ok) {
+        if (ok) {
+          console.log("DB created");
+          console.log("Creating tables");
+          dal.init.tablesExistsAndCreates(function (tablesdone) {
+            if (tablesdone) {
+              console.log("Creating tables - DONE")
+              console.log("Checking views...");
+              dal.init.viewsExistsAndCreates(function (viewsdone) {
+                if (viewsdone) {
+                  console.log("Creating views - DONE");
+                } else {
+                  console.log("NOT IMPLEMENTED :(")
+                }
+              })
+            } else {
+              console.log("NOT IMPLEMENTED :(")
+            }
+          })
+        } else {
+          console.log("something went wrong on db creation...")
+        }
+      })
+    }
+  })
 }
