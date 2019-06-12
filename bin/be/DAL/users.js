@@ -18,21 +18,6 @@ module.exports = {
       }
     })
   },
-  login: function (mail, cb) {
-    storage('GET', "/tables/users/rows?filter=mail=" + "'" + mail+ "'", {}, function (error, response, body) {
-      if (!error) {
-        if (response.statusCode == 200) {
-          json = JSON.parse(response.body);
-          cb(false, json.list_of_rows);
-        } else {
-          json = JSON.parse(response.body);
-          cb(false, json.message);
-        }
-      } else {
-        cb(true, "Relational Storage Component not responding");
-      }
-    })
-  },
   create: function (mail, name, role, company, cb) {
     let data = [{
       mail: mail,

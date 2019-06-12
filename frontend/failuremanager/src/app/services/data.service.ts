@@ -31,10 +31,6 @@ export class DataService {
   constructor(private http: HttpClient) {
   }
 
-    //get hello test
-    getHello(): Observable<any> {
-        return this.http.get(environment.apiUrl + '/sayhello')
-        }
 
   // Alarm methods
 

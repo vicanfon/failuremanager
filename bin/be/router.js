@@ -48,6 +48,5 @@ router.route("/users").get(ctl.users.get);
 router.route("/users").post(ctl.users.create);
 router.route("/users").patch(ctl.users.update);
 router.route("/users").delete(ctl.users.delete);
-router.route("/login").post(ctl.users.login);
 
 module.exports = router;

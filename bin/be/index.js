@@ -9,10 +9,10 @@ var dal = require('./DAL');
 /**
  * Fixing things
  */
-var path = require('path');
+/*var path = require('path');
 var baseDir = require('app-root-path').path;
 require('app-module-path')
-    .addPath(baseDir);
+    .addPath(baseDir);*/
 
 
 /**
