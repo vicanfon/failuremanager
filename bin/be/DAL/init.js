@@ -175,6 +175,8 @@ module.exports = {
             body: config.storage.dataBaseName
         }
         request(Requestoptions, function (error, response, body) {
+            console.log("error:" + error);
+            console.log("response:" + JSON.stringify(response));
 
             if (!error) {
                 console.log("status", response.statusCode)
