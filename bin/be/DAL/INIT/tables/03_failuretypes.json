@@ -8,8 +8,7 @@
     },
     {
       "name":"id",
-      "size":100,
-      "type":"varchar"
+      "type":"serial"
     }
   ],
   "constraints":[
