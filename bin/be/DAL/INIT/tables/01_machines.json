@@ -17,7 +17,7 @@
         "columns":[
           "id"
         ],
-        "name":"pk_id",
+        "name":"pk_idMachine",
         "on_delete":"CASCADE",
         "on_update":"CASCADE"
       },

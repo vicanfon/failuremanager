@@ -18,7 +18,7 @@
         "columns":[
           "id"
         ],
-        "name":"pk_id",
+        "name":"pk_idFT",
         "on_delete":"CASCADE",
         "on_update":"CASCADE"
       },

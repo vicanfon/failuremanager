@@ -93,7 +93,7 @@
         "columns":[
           "id"
         ],
-        "name":"pk_id",
+        "name":"pk_idAlarm",
         "on_delete":"CASCADE",
         "on_update":"CASCADE"
       },

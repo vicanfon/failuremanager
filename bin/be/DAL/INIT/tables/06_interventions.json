@@ -55,7 +55,7 @@
         "columns":[
           "id"
         ],
-        "name":"pk_id",
+        "name":"pk_idIntervention",
         "on_delete":"CASCADE",
         "on_update":"CASCADE"
       },

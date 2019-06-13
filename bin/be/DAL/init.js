@@ -50,7 +50,7 @@ var getExistingViews = function () {
 module.exports = {
     dbExists: function (cb) {
         storage('GET', '/tables', {}, function (err, response, body) {
-            console.log(response.statusCode);
+            // console.log(response);
             if (!err) {
                 if (response.statusCode == 404) {
                     cb(false);
