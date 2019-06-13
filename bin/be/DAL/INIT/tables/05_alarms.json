@@ -43,7 +43,8 @@
     {
       "allow_null":false,
       "name":"idAlarmType",
-      "type":"serial"
+      "size":100,
+      "type":"varchar"
     },
     {
       "allow_null":false,
