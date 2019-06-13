@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="26549e5a-cd72-4d42-962f-d08cc659cc65" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-end-line="4" />
+            <state relative-caret-position="17">
+              <caret line="1" column="410" lean-forward="true" selection-start-line="1" selection-start-column="410" selection-end-line="1" selection-end-column="410" />
             </state>
           </provider>
         </entry>
@@ -73,7 +73,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -124,6 +124,7 @@
       <find>something we</find>
       <find>something went</find>
       <find>NOT IM</find>
+      <find>comment</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -143,7 +144,6 @@
         <option value="$PROJECT_DIR$/bin/be/controllers/stats.js" />
         <option value="$PROJECT_DIR$/bin/be/DAL/alarmtypes.js" />
         <option value="$PROJECT_DIR$/bin/be/DAL/failuretypes.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" />
         <option value="$PROJECT_DIR$/bin/be/app.js" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" />
         <option value="$PROJECT_DIR$/bin/be/controllers/users.js" />
@@ -159,6 +159,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" />
       </list>
     </option>
   </component>
@@ -326,12 +327,12 @@
       <option name="presentableId" value="Default" />
       <updated>1560352160136</updated>
       <workItem from="1560352162657" duration="12217000" />
-      <workItem from="1560443907802" duration="2738000" />
+      <workItem from="1560443907802" duration="3148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14955000" />
+    <option name="totallyTimeSpent" value="15365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1287" y="-7" width="1038" height="794" extended-state="6" />
@@ -609,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -637,6 +631,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="410" lean-forward="true" selection-start-line="1" selection-start-column="410" selection-end-line="1" selection-end-column="410" />
         </state>
       </provider>
     </entry>

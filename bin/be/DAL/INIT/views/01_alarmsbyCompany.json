@@ -1,4 +1,4 @@
 {
-    "view_definition_query":"select alarms.id, alarms.timestamp, alarms.status, alarms.company, alarms.comment, machines.name, failuretypes.name, alarmtypes.code, alarmtypes.name, failuretypes.id, machines.id from failuremanager.alarms as alarms left join failuremanager.machines as machines on alarms.idMachine = machines.id left join failuremanager.alarmtypes as alarmtypes on alarms.idAlarmType = alarmtypes.code left join failuremanager.failuretypes as failuretypes on alarms.idFailureType = failuretypes.id",
+    "view_definition_query":"select alarms.id, alarms.timestamp, alarms.status, alarms.company, machines.name, failuretypes.name, alarmtypes.code, alarmtypes.name, failuretypes.id, machines.id from failuremanager.alarms as alarms left join failuremanager.machines as machines on alarms.idMachine = machines.id left join failuremanager.alarmtypes as alarmtypes on alarms.idAlarmType = alarmtypes.code left join failuremanager.failuretypes as failuretypes on alarms.idFailureType = failuretypes.id",
     "view_name":"alarmsbyCompany"
 }
