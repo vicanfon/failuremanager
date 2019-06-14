@@ -11,7 +11,7 @@ var cors = require('cors');
 
 var app = express();
 
-//cors configuration
+// cors configuration
 if(config.cors.allow){
   console.log("CORS is allowed!");
   app.use(cors());

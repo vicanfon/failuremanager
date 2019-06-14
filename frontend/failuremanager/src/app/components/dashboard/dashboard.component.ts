@@ -22,8 +22,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.authService.getCompany());
-    // this.dataService.getStatsbyCompany(this.authService.getCompany()).subscribe(stats => {this.stats = stats[0]; console.log('stats: '+ JSON.stringify(stats[0])); });
-    this.dataService.getStatsbyCompany(this.authService.getCompany()).subscribe(stats => {this.stats = stats[0]; this.showChart(stats[0].frequentfailuretypes);});
+    // uncomment this -- this.dataService.getStatsbyCompany(this.authService.getCompany()).subscribe(stats => {this.stats = stats[0]; this.showChart(stats[0].frequentfailuretypes);});
     // this.dataService.getHello().subscribe(response => {this.hellomsg = response},err=>{console.log(err)});
   }
 

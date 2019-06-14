@@ -73,9 +73,6 @@ import { UserNewComponent } from './components/user/user-new/user-new.component'
     FormsModule,
     NgbModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
     TableModule,
     SliderModule,
     ChartModule,
@@ -88,4 +85,11 @@ import { UserNewComponent } from './components/user/user-new/user-new.component'
   bootstrap: [AppComponent],
   entryComponents: [AlarmDetailComponent, UserDetailComponent, UserNewComponent]
 })
+
+/*
+ *     HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+
+ */
 export class AppModule { }

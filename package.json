@@ -21,7 +21,7 @@
    },
    "devDependencies": {},
    "scripts": {
-      "boot": "npm install && cd frontend/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/vapp12/\" --base-href=\"/vapp12/\" ",
+      "boot": "npm install && cd frontend/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/failuremanager/\" --base-href=\"/failuremanager/\" ",
       "dev": "npm install && cd frontend/failuremanager && npm install && ng build",
       "start": "node ./bin/be/index.js"
    },

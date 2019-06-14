@@ -1,6 +1,6 @@
 FROM node:alpine
 
-ENV ASSET_NAME="vapp12"
+ENV ASSET_NAME="failuremanager"
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

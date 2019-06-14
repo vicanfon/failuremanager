@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
+var dal = require('./DAL');
+
 
 /**
  * Module dependencies.
  */
-var dal = require('./DAL');
 
 /**
  * Fixing things
