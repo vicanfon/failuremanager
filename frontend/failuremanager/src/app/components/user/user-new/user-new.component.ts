@@ -21,7 +21,8 @@ export class UserNewComponent implements OnInit {
   }
 
   createUser(form: NgForm) {
-    this.dataService.createUser(form.value.mail, form.value.name,form.value.role, form.value.company).subscribe(data => {console.log("data: " + JSON.stringify(data)); this.ref.close();});
+      console.log("data: "+form.value.mail + form.value.name + form.value.role + form.value.company);
+    this.dataService.createUser(form.value.mail, form.value.name,form.value.role, form.value.company).subscribe(data => {this.ref.close();});
   }
   cancel() {
     this.ref.close();

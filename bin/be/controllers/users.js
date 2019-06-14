@@ -13,6 +13,7 @@ module.exports = {
   },
   create: function (req, res) {
       console.log("me parto");
+    console.log("body:"+JSON.stringify(req.body));
     if (req.body.mail && req.body.name && req.body.role && req.body.company) {
       dal.users.create(req.body.mail, req.body.name, req.body.role, req.body.company, function (err, answer) {
         if (!err) {
