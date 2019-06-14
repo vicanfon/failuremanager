@@ -12,16 +12,34 @@ module.exports = {
         }
       })
 
-    } else {
-      //get all projects by project
-      dal.interventions.getByCompany(req.query.company, function (err, answer) {
+    } else if (req.query.idalarm) {
+      dal.interventions.getByAlarmId(req.query.idalarm, function (err, answer) {
         if (!err) {
           res.status(200).send(answer);
         } else {
           res.status(500).end();
         }
       })
-    }
+    } else {
+        if (req.query.company !== "mass") {
+          //get all projects by project
+          dal.interventions.getByCompany(req.query.company, function (err, answer) {
+            if (!err) {
+              res.status(200).send(answer);
+            } else {
+              res.status(500).end();
+            }
+          })
+        }else{
+          dal.interventions.get(function (err, answer) {
+            if (!err) {
+              res.status(200).send(answer);
+            } else {
+              res.status(500).end();
+            }
+          })
+        }
+      }
     //res.status(201).json({awesome: "working"})
   },
   create: function (req, res) {
@@ -39,9 +57,18 @@ module.exports = {
     }
   },
   update: function (req, res) {
-    // console.log("BODY", req.body)
-    if (req.query.id && req.body.solution && req.body.comment && req.body.timestamp && req.body.duration && req.body.status) {
+    console.log("BODY", req.body);
+    if (req.query.id && req.body.duration) {
       dal.interventions.update(req.query.id, req.body.solution, req.body.comment, req.body.timestamp, req.body.duration, req.body.status, function (err, answer) {
+        if (!err) {
+          res.status(200).send(answer);
+        } else {
+          res.status(500).end();
+        }
+      })
+
+    }else if (req.query.id && req.body.status) {
+      dal.interventions.updateStatus(req.query.id, req.body.status, req.body.comment, function (err, answer) {
         if (!err) {
           res.status(200).send(answer);
         } else {

@@ -19,11 +19,41 @@ module.exports = {
         })
     },
     getById: function(id, cb){
-        storage('GET', "/tables/interventions_alarms/rows?filter=id=" + "'" + alarmID+ "'", {}, function (error, response, body) {
+        storage('GET', "/tables/interventions_alarms/rows?filter=id=" + "'" + id+ "'", {}, function (error, response, body) {
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
                     cb(false, json.list_of_rows[0]);
+                } else {
+                    json = JSON.parse(response.body);
+                    cb(false, json.message);
+                }
+            } else {
+                cb(true, "Relational Storage Component not responding");
+            }
+        })
+    },
+    getByAlarmId: function(alarmID, cb){
+        storage('GET', "/tables/interventions_alarms/rows?filter=idalarm=" + "'" + alarmID+ "'", {}, function (error, response, body) {
+            if (!error) {
+                if (response.statusCode == 200) {
+                    json = JSON.parse(response.body);
+                    cb(false, json.list_of_rows[0]);
+                } else {
+                    json = JSON.parse(response.body);
+                    cb(false, json.message);
+                }
+            } else {
+                cb(true, "Relational Storage Component not responding");
+            }
+        })
+    },
+    get: function(cb){
+        storage('GET', "/tables/interventions_alarms/rows", {}, function (error, response, body) {
+            if (!error) {
+                if (response.statusCode == 200) {
+                    json = JSON.parse(response.body);
+                    cb(false, json.list_of_rows);
                 } else {
                     json = JSON.parse(response.body);
                     cb(false, json.message);
@@ -53,11 +83,25 @@ module.exports = {
         let data = {
             solution: solution,
             comment: comment,
-            timestamp: timestamp,
             duration: duration,
             status: status
         };
         storage('PATCH', "/tables/interventions/rows?filter=id='" + id + "'", data, function (error, response, body) {
+//            console.log("updateintervention:"+JSON.stringify(response));
+            if (!error) {
+                cb(false, { message: "Intervention is updated" })
+            } else {
+                cb(true, "Relational Storage Component not responding");
+            }
+        })
+    },
+    updateStatus: function (id, status, comment, cb) {
+        let data = {
+            status: status,
+            comment: comment
+        };
+        storage('PATCH', "/tables/interventions/rows?filter=id='" + id + "'", data, function (error, response, body) {
+            console.log("updateintervention:"+JSON.stringify(response));
             if (!error) {
                 cb(false, { message: "Intervention is updated" })
             } else {

@@ -25,20 +25,24 @@ export class InterventionDetailComponent implements OnInit {
     /*if (this.config.data && !this.intervention){
       this.intervention= this.config.data;
     }*/
-    // this.intervention = this.config.data;
-    this.dataService.getInterventionbyAlarm(this.config.data.alarmid).subscribe(intervention => {this.intervention = intervention[0]; console.log("intervention: " + JSON.stringify(this.intervention));});
+    this.dataService.getInterventionbyAlarm(this.config.data).subscribe(intervention => {this.intervention = intervention; console.log("intervention: " + JSON.stringify(this.intervention));});
   }
 
   acceptIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Closed", form.value.comment).subscribe(data=>{});
+    this.dataService.editInterventionState(this.intervention.id, "Closed", form.value.comment).subscribe(data=>{
+      this.dataService.changeStatusAlarm(this.config.data,"Accepted").subscribe(data2=> this.ref.close());
+    });
   }
 
   rejectIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Open", form.value.comment).subscribe(data=>{});;
+    this.dataService.editInterventionState(this.intervention.id, "Open", form.value.comment).subscribe(data=>{
+      this.dataService.changeStatusAlarm(this.config.data,"Rejected").subscribe(data2=> this.ref.close());
+    });
   }
 
   editIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, this.intervention.status, form.value.comment).subscribe(data=>{});;
+    console.log("edit data:" + this.intervention.id +"-"+ this.intervention.solution+"-"+this.intervention.timestamp+"-"+this.intervention.duration+"-"+this.config.data+"-"+ this.intervention.status+"-"+ form.value.comment)
+    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data, this.intervention.status, form.value.comment).subscribe(data=>{this.ref.close()});;
   }
 
 

@@ -5,6 +5,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {AlarmDetailComponent} from '../alarm/alarm-detail/alarm-detail.component';
 import {DialogService} from 'primeng/api';
 import {InterventionDetailComponent} from './intervention-detail/intervention-detail.component';
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-intervention',
@@ -17,7 +18,7 @@ export class InterventionComponent implements OnInit {
   cols: any[];
   selectedIntervention: Intervention;
 
-  constructor(private dataService: DataService, public dialogService: DialogService) { }
+  constructor(public authService: AuthService, private dataService: DataService, public dialogService: DialogService) { }
 
   ngOnInit() {
     this.getInterventions();
@@ -26,9 +27,9 @@ export class InterventionComponent implements OnInit {
       { field: 'timestamp', header: 'Timestamp' },
       { field: 'solution', header: 'Solution' },
       { field: 'duration', header: 'Duration' },
-      { field: 'alarmCode', header: 'Alarm Code' },
-      { field: 'alarmName', header: 'Alarm Name' },
-      { field: 'alarmType', header: 'Alarm Type' },
+      { field: 'alarmcode', header: 'Alarm Code' },
+      { field: 'alarmname', header: 'Alarm Name' },
+      { field: 'alarmtype', header: 'Alarm Type' },
       { field: 'machine', header: 'Machine' },
       { field: 'company', header: 'Company' },
       { field: 'status', header: 'State' }
@@ -37,7 +38,7 @@ export class InterventionComponent implements OnInit {
 
   show(event) {
     const ref = this.dialogService.open(InterventionDetailComponent, {
-      data: event.data,
+      data: this.selectedIntervention.idalarm,
       header: 'Intervention detail',
       width: '85%'
     });
@@ -45,7 +46,7 @@ export class InterventionComponent implements OnInit {
   }
 
   getInterventions(): void {
-    this.dataService.getInterventions().subscribe(interventions => this.interventions = interventions);
+    this.dataService.getInterventionsbyCompany(this.authService.getCompany()).subscribe(interventions => this.interventions = interventions);
   }
 
 }

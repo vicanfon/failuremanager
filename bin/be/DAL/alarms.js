@@ -33,6 +33,21 @@ module.exports = {
       }
     })
   },
+  get: function(cb){
+    storage('GET', "/tables/alarmsbyCompany/rows?filter=status!='Detected'", {}, function (error, response, body) {
+      if (!error) {
+        if (response.statusCode == 200) {
+          json = JSON.parse(response.body);
+          cb(false, json.list_of_rows);
+        } else {
+          json = JSON.parse(response.body);
+          cb(false, json.message);
+        }
+      } else {
+        cb(true, "Relational Storage Component not responding");
+      }
+    })
+  },
   updateStatus: function(alarmId, newStatus,cb){
     storage('PATCH', "/tables/alarms/rows?filter=id='" + alarmId + "'", {status: newStatus}, function(error, response, body){
       if(!error){
@@ -61,7 +76,7 @@ module.exports = {
       }
     })
   },
-  update: function (id, timestamp, status, code, name, type, machine, company, origin, comment, cb) {
+  update: function (id, timestamp, status, code,type, machine, company, origin, comment, cb) {
     let data = {
       timestamp: timestamp,
       status: status,

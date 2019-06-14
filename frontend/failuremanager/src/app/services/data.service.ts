@@ -39,11 +39,7 @@ export class DataService {
   }
 
   getAlarmsbyCompany(company: string): Observable<Alarm[]> {
-    if(company === 'mass'){
-      return this.http.get<Alarm[]>(environment.apiUrl + '/alarms');
-    }else{
       return this.http.get<Alarm[]>(environment.apiUrl + '/alarms?company=' + company);
-    }
   }
 
   getAlarm(id: number): Observable<Alarm> {
@@ -68,12 +64,11 @@ export class DataService {
     });
   }
 
-  editAlarm(id: number, timestamp: Date, status: string, code: string, name: string, type: string, machine: string, company: string, origin: string, comment: string) {
+  editAlarm(id: number, timestamp: Date, status: string, code: string, type: number, machine: number, company: string, origin: string, comment: string) {
     return this.http.patch(environment.apiUrl + '/alarms?id=' + id, {
       timestamp: timestamp,
       status: status,
       code: code,
-      name: name,
       type: type,
       machine: machine,
       company: company,
@@ -101,10 +96,10 @@ export class DataService {
   }
 
   getInterventionbyAlarm(alarmid: number): Observable<Intervention> {
-    return this.http.get<Intervention>(environment.apiUrl + '/interventions?alarmid=' + alarmid);
+    return this.http.get<Intervention>(environment.apiUrl + '/interventions?idalarm=' + alarmid);
   }
 
-  createIntervention(solution: string, timestamp: Date, duration: number, alarmid: number, status: string) {
+  createIntervention(solution: string, timestamp: string, duration: number, alarmid: number, status: string) {
     return this.http.post(environment.apiUrl + '/interventions', {
       solution: solution,
       timestamp: timestamp,
@@ -126,6 +121,13 @@ export class DataService {
     });
   }
 
+  editInterventionState(id: number, status: string, comment: string) {
+    return this.http.patch(environment.apiUrl + '/interventions?id=' + id, {
+      status: status,
+      comment: comment
+    });
+  }
+
   deleteIntervention(id: number) {
     return this.http.delete(environment.apiUrl + '/interventions?id=' + id);
   }
@@ -137,7 +139,6 @@ export class DataService {
   }
 
   createAlarmType(code: string, name: string) {
-    console.log("I was here in at");
     return this.http.post(environment.apiUrl + '/alarmtypes', {
       code: code,
       name: name
@@ -173,12 +174,7 @@ export class DataService {
   // get stats
 
   getStatsbyCompany(company: string): Observable<Stats[]> {
-    //return this.http.get<Stats>(environment.apiUrl + '/stats');
-    if (company === 'mass') {
-      return this.http.get<Stats[]>(environment.apiUrl + '/stats');
-    } else {
       return this.http.get<Stats[]>(environment.apiUrl + '/stats?company=' + company);
-    }
   }
 
   // get machines

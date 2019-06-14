@@ -12,43 +12,47 @@
   <div class="row">
     <div class="form-group col-md-3">
       <span for="timestamp">Timestamp</span>
-      <input type="text" id="timestamp" name="timestamp" [value]="alarm.timestamp" readonly>
+      <input type="text" id="timestamp" name="timestamp" [(ngModel)]="alarm.timestamp" readonly>
     </div>
     <div class="form-group col-md-3">
       <span for="status">Status</span>
-      <input type="text" id="status" name="status" [value]="alarm.status" readonly>
+      <input type="text" id="status" name="status" [(ngModel)]="alarm.status" readonly>
     </div>
     <div class="form-group col-md-3">
       <span for="code">Alarm Code</span>
-      <input type="text" id="code" name="code" [value]="alarm.code" readonly>
+      <input type="text" id="code" name="code" [(ngModel)]="alarm.code" readonly>
     </div>
     <div class="form-group col-md-3">
       <span for="origin">Origin</span>
-      <input type="text" id="origin" name="origin" [value]="alarm.origin" readonly>
+      <input type="text" id="origin" name="origin" [(ngModel)]="alarm.origin" readonly>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-9">
       <span for="name">Name</span>
-      <input type="text" id="name" name="name" [value]="alarm.name" readonly>
+      <input type="text" id="name" name="name" [(ngModel)]="alarm.name" readonly>
     </div>
-    <div *ngIf="authService.getCompany()=='mass'" class="form-group col-md-3">
+    <div *ngIf="authService.getCompany()=='mass' && alarm.status == 'Activated'" class="form-group col-md-3">
       <span for="type">Type</span><tr></tr>
       <p-dropdown name="type" [options]="types" [(ngModel)]="selectedType" placeholder="Select a type" optionLabel="name" [showClear]="true"></p-dropdown>
+    </div>
+    <div *ngIf="authService.getCompany()=='mass' && alarm.status != 'Activated'" class="form-group col-md-3">
+      <span for="type">Type</span><tr></tr>
+      <input type="text" id="type" name="type" [(ngModel)]="alarm.type" readonly>
     </div>
   </div>
   <div class="row">
     <div class="form-group col-md-3">
       <span for="machine">Machine</span>
-      <input type="text" id="machine" name="machine" [value]="alarm.machine" readonly>
+      <input type="text" id="machine" name="machine" [(ngModel)]="alarm.machine" readonly>
     </div>
     <div class="form-group col-md-3">
       <span for="company">Company</span>
-      <input type="text" id="company" name="company" [value]="alarm.company" readonly>
+      <input type="text" id="company" name="company" [(ngModel)]="alarm.company" readonly>
     </div>
     <div class="form-group col-md-6">
       <span for="comment">Comment:</span>
-      <textarea  style="height: 100px;" id="comment" name="comment" ngModel={{alarm.comment}} [readOnly]="alarm.status != 'Detected'"></textarea>
+      <textarea  style="height: 100px;" id="comment" name="comment" [(ngModel)]="alarm.comment" [readOnly]="alarm.status != 'Detected'"></textarea>
     </div>
   </div>
 </form>

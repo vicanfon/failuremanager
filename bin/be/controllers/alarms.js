@@ -13,14 +13,24 @@ module.exports = {
       })
 
     } else {
-      //get all projects by project
-      dal.alarms.getByCompany(req.query.company, function (err, answer) {
-        if (!err) {
-          res.status(200).send(answer);
-        } else {
-          res.status(500).end();
-        }
-      })
+      if (req.query.company !== "mass") {
+        //get all projects by project
+        dal.alarms.getByCompany(req.query.company, function (err, answer) {
+          if (!err) {
+            res.status(200).send(answer);
+          } else {
+            res.status(500).end();
+          }
+        })
+      }else{
+        dal.alarms.get(function (err, answer) {
+          if (!err) {
+            res.status(200).send(answer);
+          } else {
+            res.status(500).end();
+          }
+        })
+      }
     }
     //res.status(201).json({awesome: "working"})
   },
@@ -40,8 +50,8 @@ module.exports = {
   },
   update: function (req, res) {
     // console.log("BODY", req.body)
-    if (req.query.id && req.body.timestamp && req.body.status && req.body.code && req.body.name && req.body.type && req.body.machine && req.body.company && req.body.origin && req.body.comment) {
-      dal.alarms.update(req.query.id, req.body.timestamp, req.body.status, req.body.code, req.body.name, req.body.type, req.body.machine, req.body.company, req.body.origin, req.body.comment, function (err, answer) {
+    if (req.query.id && req.body.timestamp && req.body.status && req.body.code && req.body.type && req.body.machine && req.body.company && req.body.origin && req.body.comment) {
+      dal.alarms.update(req.query.id, req.body.timestamp, req.body.status, req.body.code, req.body.type, req.body.machine, req.body.company, req.body.origin, req.body.comment, function (err, answer) {
         if (!err) {
           res.status(200).send(answer);
         } else {

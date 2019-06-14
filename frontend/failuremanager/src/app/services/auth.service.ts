@@ -22,7 +22,7 @@ export class AuthService {
 
   login(username: string, password: string){
     // call to storage to create login and password account
-    this.dataService.getUser(username).subscribe((user)=> {console.log("user:" + user); this.validate(user)});
+    this.dataService.getUser(username).subscribe((user)=> {console.log("user:" + user); this.validate(user[0])});
 
     /*if (username === "mass" && password === "1234"){
       this.token = "abc";
