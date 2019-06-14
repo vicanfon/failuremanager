@@ -2,6 +2,7 @@ var dal = require('../DAL');
 
 module.exports = {
   get: function (req, res) {
+    console.log("me parto 2");
       dal.users.get(function (err, answer) {
         if (!err) {
           res.status(200).send(answer);
@@ -11,7 +12,8 @@ module.exports = {
       })
   },
   create: function (req, res) {
-    //body: {name,description}
+      console.log("me parto");
+    console.log("body:"+req.body);
     if (req.body.mail && req.body.name && req.body.role && req.body.company) {
       dal.users.create(req.body.mail, req.body.name, req.body.role, req.body.company, function (err, answer) {
         if (!err) {

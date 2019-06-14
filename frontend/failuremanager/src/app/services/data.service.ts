@@ -213,12 +213,14 @@ export class DataService {
   }
 
   createUser(mail: string, name: string, role: string, company: string) {
-    return this.http.post(environment.apiUrl + '/users',{
+      console.log("I arrived here" + environment.apiUrl);
+    return this.http.post(environment.apiUrl + '/users', {});
+    /*{
       mail: mail,
       name: name,
       role: role,
       company: company
-    });
+    }*/
   }
 
   editUser(mail: string, name: string, role: string, company: string) {
