@@ -50,14 +50,14 @@ module.exports = {
         })
     },
     update: function (id, solution, comment, timestamp, duration, status, cb) {
-        let data = [{
+        let data = {
             solution: solution,
             comment: comment,
             timestamp: timestamp,
             duration: duration,
             status: status
-        }];
-        storage('PATCH', "/tables/interventions/rows?filter=id=" + id, data, function (error, response, body) {
+        };
+        storage('PATCH', "/tables/interventions/rows?filter=id='" + id + "'", data, function (error, response, body) {
             if (!error) {
                 cb(false, { message: "Intervention is updated" })
             } else {
@@ -66,7 +66,7 @@ module.exports = {
         })
     },
     delete: function(id, cb){
-        storage('DELETE', "/tables/interventions/rows?filter=id=" + id, {}, function(error, response, body){
+        storage('DELETE', "/tables/interventions/rows?filter=id='" + id + "'", {}, function(error, response, body){
             if(!error){
                 cb(false, {message: "Intervention is deleted"})
             }else{

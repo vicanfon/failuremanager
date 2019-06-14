@@ -4,7 +4,7 @@ const storage = require("./storageRequester");
 
 module.exports = {
     getByCompany: function (company, cb) {
-        storage('GET', "/tables/statsbyCompany/rows?filter=company=" + "'" + company+ "'", {}, function (error, response, body) {
+        storage('GET', "/tables/alarms/rows?query_columns_specification=count(status)&filter=company=" + "'" + company+ "'&group_by='status'", {}, function (error, response, body) {
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);

@@ -1,4 +1,0 @@
-{
-  "view_definition_query":"select alarms.id as alarmid from failuremanager.alarms",
-  "view_name":"statsbyCompany"
-}

@@ -41,7 +41,7 @@ export class InterventionComponent implements OnInit {
       header: 'Intervention detail',
       width: '85%'
     });
-    ref.onClose.subscribe(x => console.log(x));
+    ref.onClose.subscribe(x => this.getInterventions());
   }
 
   getInterventions(): void {

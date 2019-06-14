@@ -27,9 +27,7 @@ export class InterventionManualComponent implements OnInit {
     const status = 'Open';
     const duration = form.value.code;
     const solution = form.value.name;
-    this.dataService.createIntervention(solution,timestamp,duration,this.alarmid,status);
-    form.reset();
-    this.ref.close();
+    this.dataService.createIntervention(solution,timestamp,duration,this.alarmid,status).subscribe(data => {form.reset(); this.ref.close();});;
   }
   close(){
     this.ref.close();

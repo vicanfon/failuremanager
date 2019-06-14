@@ -30,15 +30,15 @@ export class InterventionDetailComponent implements OnInit {
   }
 
   acceptIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Closed", form.value.comment);
+    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Closed", form.value.comment).subscribe(data=>{});
   }
 
   rejectIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Open", form.value.comment);
+    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, "Open", form.value.comment).subscribe(data=>{});;
   }
 
   editIntervention(form: NgForm) {
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, this.intervention.status, form.value.comment);
+    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data.alarmid, this.intervention.status, form.value.comment).subscribe(data=>{});;
   }
 
 

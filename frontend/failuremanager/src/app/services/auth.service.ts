@@ -22,7 +22,7 @@ export class AuthService {
 
   login(username: string, password: string){
     // call to storage to create login and password account
-    this.dataService.getUser(username).subscribe((user)=> this.validate(user[0]));
+    this.dataService.getUser(username).subscribe((user)=> {console.log("user:" + user); this.validate(user)});
 
     /*if (username === "mass" && password === "1234"){
       this.token = "abc";
@@ -41,7 +41,7 @@ export class AuthService {
 
   validate(user: User){
     if(user){
-      this.token = "abc";
+      // this.token = "abc";
       this.role = user.role;
       this.company = user.company;
       this.router.navigate(['/dashboard']);
@@ -55,12 +55,13 @@ export class AuthService {
   }
 
   logout(){
-    this.token = null;
+//    this.token = null;
+    this.company = null;
     this.router.navigate(['/']);
   }
 
   isAuthenticated(){
-    return this.token != null;
+    return this.company != null;
   }
   getRole(){
     return this.role;

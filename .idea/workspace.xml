@@ -2,9 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26549e5a-cd72-4d42-962f-d08cc659cc65" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/alarms.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/alarms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/alarmtypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/alarmtypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/failuretypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/failuretypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/interventions.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/interventions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/machines.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/machines.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/controllers/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,19 +44,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/DAL/init.js">
+        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/in-memory-data.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/DAL/syncStorageRequester.js">
+        <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/06_interventions.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="255">
+              <caret line="54" column="19" lean-forward="true" selection-end-line="71" />
             </state>
           </provider>
         </entry>
@@ -38,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -47,17 +85,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+            <state relative-caret-position="17">
+              <caret line="1" column="241" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/be/DAL/stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+            <state relative-caret-position="187">
+              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -65,29 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/02_alarmtypes.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="169" column="33" selection-start-line="169" selection-start-column="33" selection-end-line="169" selection-end-column="33" />
-              <folding>
-                <element signature="e#2030#3503#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -95,15 +124,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="405">
+              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/04_users.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="694">
+              <caret line="42" column="11" lean-forward="true" selection-end-line="47" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -126,7 +159,18 @@
       <find>something went</find>
       <find>NOT IM</find>
       <find>comment</find>
+      <find>create_m</find>
+      <find>createmac</find>
+      <find>form</find>
+      <find>this.refreshdata()</find>
+      <find>getRole</find>
     </findStrings>
+    <replaceStrings>
+      <replace>{this.refreshdata();}</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\vfos\angular\failuremanager\frontend</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -139,29 +183,43 @@
         <option value="$PROJECT_DIR$/bin/be/controllers/alarmtypes.js" />
         <option value="$PROJECT_DIR$/bin/be/controllers/machines.js" />
         <option value="$PROJECT_DIR$/bin/be/controllers/alarms.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/stats.js" />
         <option value="$PROJECT_DIR$/bin/be/DAL/index.js" />
         <option value="$PROJECT_DIR$/bin/be/controllers/stats.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/alarmtypes.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/failuretypes.js" />
         <option value="$PROJECT_DIR$/bin/be/app.js" />
-        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" />
-        <option value="$PROJECT_DIR$/bin/be/controllers/users.js" />
         <option value="$PROJECT_DIR$/bin/be/router.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/users.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/machines.js" />
-        <option value="$PROJECT_DIR$/bin/be/index.js" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/06_interventions.json" />
         <option value="$PROJECT_DIR$/bin/be/DAL/init.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" />
+        <option value="$PROJECT_DIR$/bin/be/index.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.html" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.html" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/bin/be/controllers/users.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/users.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/machines.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/failuretypes.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/alarmtypes.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/interventions.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/alarms.js" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json" />
         <option value="$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/stats.js" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json" />
       </list>
     </option>
   </component>
@@ -177,10 +235,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1289" />
-    <option name="y" value="-9" />
-    <option name="width" value="1298" />
-    <option name="height" value="993" />
+    <option name="x" value="-8" />
+    <option name="y" value="2" />
+    <option name="width" value="1934" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -204,6 +262,13 @@
               <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
               <item name="be" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="be" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
@@ -249,6 +314,35 @@
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
               <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -279,7 +373,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.ang">
+    <configuration name="ang" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ang" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="boot" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -313,6 +417,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.ang" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.boot" />
       </list>
@@ -330,33 +435,34 @@
       <updated>1560352160136</updated>
       <workItem from="1560352162657" duration="12217000" />
       <workItem from="1560443907802" duration="4256000" />
+      <workItem from="1560519983465" duration="14060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16473000" />
+    <option name="totallyTimeSpent" value="31925000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1287" y="-7" width="1038" height="794" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25153375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30878186" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35045317" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2665222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37393767" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="TypeScript" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
+      <window_info anchor="bottom" id="GraphQL" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.4652568" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.46458924" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -367,57 +473,255 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/be/passport.js" />
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/failuretype.js">
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/environments/environment.prod.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="55" lean-forward="true" selection-end-line="55" />
+        <state relative-caret-position="306">
+          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/interventions.js">
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+        <state relative-caret-position="-65228" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/machines.js">
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="324">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarmtypes.js">
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="49" column="8" lean-forward="true" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="36" selection-start-column="6" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-408">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="-612">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#139#618#0" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarmtypes.js">
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="307">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-489" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="103" selection-start-line="47" selection-start-column="103" selection-end-line="47" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="44" column="1" selection-start-line="44" selection-start-column="1" selection-end-line="44" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="23" column="141" selection-start-line="23" selection-start-column="101" selection-end-line="23" selection-end-column="141" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="131" column="64" selection-start-line="131" selection-start-column="64" selection-end-line="131" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="79" column="146" selection-start-line="79" selection-start-column="146" selection-end-line="79" selection-end-column="146" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/auth/signin/signin.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/auth/signin/signin.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="46" column="39" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarmtypes.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="12" selection-start-line="4" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/navbar/navbar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="211" column="6" selection-start-line="211" selection-start-column="2" selection-end-line="211" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/controllers/machines.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/controllers/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/machines.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -426,220 +730,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/be/DAL/failuretypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="204">
+          <caret line="45" column="74" selection-start-line="45" selection-start-column="74" selection-end-line="45" selection-end-column="74" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/stats.js">
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarmtypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/stats.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="375">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/interventions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="201" selection-start-line="201" selection-end-line="201" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="2" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="391">
+          <caret line="68" column="76" selection-start-line="68" selection-start-column="76" selection-end-line="68" selection-end-column="76" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts">
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/index.js">
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/in-memory-data.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/storageRequester.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/machines.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/06_interventions.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="169" column="33" selection-start-line="169" selection-start-column="33" selection-end-line="169" selection-end-column="33" />
-          <folding>
-            <element signature="e#2030#3503#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="76" column="47" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/syncStorageRequester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/04_users.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/02_alarmtypes.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="54" column="19" lean-forward="true" selection-end-line="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/03_statsbyCompany.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="1" column="107" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/02_interventions_alarms.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="241" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/stats.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/views/01_alarmsbyCompany.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/01_machines.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/04_users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="42" column="11" lean-forward="true" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/02_alarmtypes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/03_failuretypes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/INIT/tables/05_alarms.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="89" column="30" lean-forward="true" selection-start-line="89" selection-start-column="30" selection-end-line="89" selection-end-column="30" />
         </state>
       </provider>
     </entry>

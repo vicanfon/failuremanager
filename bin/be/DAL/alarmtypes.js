@@ -32,10 +32,10 @@ module.exports = {
     })
   },
   update: function (code, name, cb) {
-    let data = [{
+    let data = {
       name: name
-    }];
-    storage('PATCH', "/tables/alarmtypes/rows?filter=code=" + code, data, function (error, response, body) {
+    };
+    storage('PATCH', "/tables/alarmtypes/rows?filter=code='" + code + "'", data, function (error, response, body) {
       if (!error) {
         cb(false, { message: "Alarm Type is updated" })
       } else {
@@ -44,7 +44,7 @@ module.exports = {
     })
   },
   delete: function(code, cb){
-    storage('DELETE', "/tables/alarmtypes/rows?filter=code=" + code, {}, function(error, response, body){
+    storage('DELETE', "/tables/alarmtypes/rows?filter=code='" + code +"'", {}, function(error, response, body){
       if(!error){
         cb(false, {message: "Alarm Type is deleted"})
       }else{

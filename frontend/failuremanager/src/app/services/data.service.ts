@@ -137,6 +137,7 @@ export class DataService {
   }
 
   createAlarmType(code: string, name: string) {
+    console.log("I was here in at");
     return this.http.post(environment.apiUrl + '/alarmtypes', {
       code: code,
       name: name
@@ -150,7 +151,7 @@ export class DataService {
   }
 
   deleteAlarmType(code: string) {
-    this.http.delete(environment.apiUrl + '/alarmtypes?code=' + code);
+    return this.http.delete(environment.apiUrl + '/alarmtypes?code=' + code);
   }
 
   getFailureTypes(): Observable<FailureType[]> {
@@ -213,7 +214,6 @@ export class DataService {
   }
 
   createUser(mail: string, name: string, role: string, company: string) {
-      console.log("data2: "+JSON.stringify({ mail: mail, name: name, role: role, company: company }));
     return this.http.post(environment.apiUrl + '/users', { mail: mail, name: name, role: role, company: company });
   }
 

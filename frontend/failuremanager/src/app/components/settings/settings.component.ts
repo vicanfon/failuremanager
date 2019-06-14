@@ -37,9 +37,7 @@ export class SettingsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getAlarmTypes().subscribe(alarmtypes => this.alarmtypes = alarmtypes);
-    this.dataService.getFailureTypes().subscribe(failuretypes => this.failuretypes = failuretypes);
-    this.dataService.getMachines().subscribe(machines => this.machines = machines);
+    this.refreshdata();
 
     this.cols_at = [
       { field: 'code', header: 'Code' },
@@ -75,42 +73,41 @@ export class SettingsComponent implements OnInit {
     this.displayDialog_m = true;
   }
   create_at() {
-    this.dataService.createAlarmType(this.alarmtype.code, this.alarmtype.name);
-    this.displayDialog_at = false;
+    console.log("at: " + this.alarmtype.code + this.alarmtype.name);
+    this.dataService.createAlarmType(this.alarmtype.code, this.alarmtype.name).subscribe(data=>{this.displayDialog_at = false;this.refreshdata();});
   }
   save_at() {
-    this.dataService.editAlarmType(this.alarmtype.code, this.alarmtype.name);
-    this.displayDialog_at = false;
+    this.dataService.editAlarmType(this.alarmtype.code, this.alarmtype.name).subscribe(data=>{this.displayDialog_at = false;this.refreshdata();});
   }
 
   delete_at() {
-    this.dataService.deleteAlarmType(this.alarmtype.code);
+    this.dataService.deleteAlarmType(this.alarmtype.code).subscribe(data=>{this.refreshdata();});
     this.displayDialog_at = false;
   }
   create_ft() {
-    this.dataService.createFailureType(this.failuretype.name);
+    this.dataService.createFailureType(this.failuretype.name).subscribe(data=>{this.refreshdata();});
     this.displayDialog_ft = false;
   }
   save_ft() {
-    this.dataService.editFailureType(+this.failuretype.id, this.failuretype.name);
+    this.dataService.editFailureType(+this.failuretype.id, this.failuretype.name).subscribe(data=>{this.refreshdata();});
     this.displayDialog_ft = false;
   }
 
   delete_ft() {
-    this.dataService.deleteFailureType(+this.failuretype.id);
+    this.dataService.deleteFailureType(+this.failuretype.id).subscribe(data=>{this.refreshdata();});
     this.displayDialog_ft = false;
   }
   create_m() {
-    this.dataService.createMachine(this.machine.name);
+    this.dataService.createMachine(this.machine.name).subscribe(data=>{this.refreshdata();});
     this.displayDialog_m = false;
   }
   save_m() {
-    this.dataService.editMachine(+this.machine.id, this.machine.name);
+    this.dataService.editMachine(+this.machine.id, this.machine.name).subscribe(data=>{this.refreshdata();});
     this.displayDialog_m = false;
   }
 
   delete_m() {
-    this.dataService.deleteMachine(+this.machine.id);
+    this.dataService.deleteMachine(+this.machine.id).subscribe(data=>{this.refreshdata();});
     this.displayDialog_m = false;
   }
 
@@ -138,6 +135,12 @@ export class SettingsComponent implements OnInit {
       o[prop] = c[prop];
     }
     return o;
+  }
+
+  refreshdata(){
+    this.dataService.getAlarmTypes().subscribe(alarmtypes => this.alarmtypes = alarmtypes);
+    this.dataService.getFailureTypes().subscribe(failuretypes => this.failuretypes = failuretypes);
+    this.dataService.getMachines().subscribe(machines => this.machines = machines);
   }
 
 }

@@ -15,8 +15,8 @@
     },
     {
       "allow_null":false,
-      "name":"name",
-      "size":100,
+      "name":"comment",
+      "size":200,
       "type":"varchar"
     },
     {
@@ -38,7 +38,7 @@
     {
       "allow_null":false,
       "name":"idMachine",
-      "type":"serial"
+      "type":"integer"
     },
     {
       "allow_null":false,
@@ -49,35 +49,11 @@
     {
       "allow_null":false,
       "name":"idFailureType",
-      "type":"serial"
+      "type":"integer"
     }
   ],
   "constraints":[
     {
-      "foreign_key":{
-        "columns":[
-          "idMachine"
-        ],
-        "name":"fk_idMachine",
-        "on_delete":"CASCADE",
-        "on_update":"CASCADE",
-        "referenced_columns":[
-          "id"
-        ],
-        "referenced_table_name":"machines"
-      },
-      "foreign_key":{
-        "columns":[
-          "idAlarmType"
-        ],
-        "name":"fk_idAlarmType",
-        "on_delete":"CASCADE",
-        "on_update":"CASCADE",
-        "referenced_columns":[
-          "code"
-        ],
-        "referenced_table_name":"alarmtypes"
-      },
       "foreign_key":{
         "columns":[
           "idFailureType"
@@ -103,6 +79,34 @@
           "id"
         ],
         "name":"unique_id"
+      }
+    },
+    {
+      "foreign_key":{
+        "columns":[
+          "idMachine"
+        ],
+        "name":"fk_idMachine",
+        "on_delete":"CASCADE",
+        "on_update":"CASCADE",
+        "referenced_columns":[
+          "id"
+        ],
+        "referenced_table_name":"machines"
+      }
+    },
+    {
+      "foreign_key":{
+        "columns":[
+          "idAlarmType"
+        ],
+        "name":"fk_idAlarmType",
+        "on_delete":"CASCADE",
+        "on_update":"CASCADE",
+        "referenced_columns":[
+          "code"
+        ],
+        "referenced_table_name":"alarmtypes"
       }
     }
   ],

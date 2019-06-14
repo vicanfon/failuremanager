@@ -34,7 +34,7 @@ module.exports = {
     })
   },
   updateStatus: function(alarmId, newStatus,cb){
-    storage('PATCH', "/tables/alarms/rows?filter=id=" + alarmId, {status: newStatus}, function(error, response, body){
+    storage('PATCH', "/tables/alarms/rows?filter=id='" + alarmId + "'", {status: newStatus}, function(error, response, body){
       if(!error){
         cb(false, {message: "Alarm is updated"})
       }else{
@@ -62,7 +62,7 @@ module.exports = {
     })
   },
   update: function (id, timestamp, status, code, name, type, machine, company, origin, comment, cb) {
-    let data = [{
+    let data = {
       timestamp: timestamp,
       status: status,
       idAlarmType: code,
@@ -71,8 +71,8 @@ module.exports = {
       company: company,
       origin: origin,
       comment: comment
-    }];
-    storage('PATCH', "/tables/alarms/rows?filter=id=" + id, data, function (error, response, body) {
+    };
+    storage('PATCH', "/tables/alarms/rows?filter=id='" + id + "'", data, function (error, response, body) {
       if (!error) {
         cb(false, { message: "Alarm is updated" })
       } else {
@@ -81,7 +81,7 @@ module.exports = {
     })
   },
   delete: function(id, cb){
-    storage('DELETE', "/tables/alarms/rows?filter=id=" + id, {}, function(error, response, body){
+    storage('DELETE', "/tables/alarms/rows?filter=id='" + id + "'", {}, function(error, response, body){
       if(!error){
         cb(false, {message: "Alarm is deleted"})
       }else{

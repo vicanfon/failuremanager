@@ -7,7 +7,7 @@
       "type":"varchar"
     },
     {
-      "name":"id",
+      "name":"idMachine",
       "type":"serial"
     }
   ],

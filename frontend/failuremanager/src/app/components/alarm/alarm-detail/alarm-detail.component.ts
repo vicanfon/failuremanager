@@ -42,8 +42,7 @@ export class AlarmDetailComponent implements OnInit {
   }
 
   changeStatusAlarm(alarmid: number, status: string){
-    this.dataService.changeStatusAlarm(alarmid, status);
-    this.ref.close();
+    this.dataService.changeStatusAlarm(alarmid, status).subscribe(data => {this.ref.close();});;
   }
 
   createIntervention(){

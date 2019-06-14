@@ -2,7 +2,17 @@ var dal = require('../DAL');
 
 module.exports = {
   get: function (req, res) {
-    console.log("me parto 2");
+    if (req.query.mail) {
+      //get project by id
+      dal.users.validate(req.query.mail, function (err, answer) {
+        if (!err) {
+          res.status(200).send(answer);
+        } else {
+          res.status(500).end();
+        }
+      })
+
+    } else {
       dal.users.get(function (err, answer) {
         if (!err) {
           res.status(200).send(answer);
@@ -10,10 +20,9 @@ module.exports = {
           res.status(500).end();
         }
       })
+    }
   },
   create: function (req, res) {
-      console.log("me parto");
-    console.log("body:"+JSON.stringify(req.body));
     if (req.body.mail && req.body.name && req.body.role && req.body.company) {
       dal.users.create(req.body.mail, req.body.name, req.body.role, req.body.company, function (err, answer) {
         if (!err) {

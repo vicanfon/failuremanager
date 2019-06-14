@@ -31,10 +31,10 @@ module.exports = {
         })
     },
     update: function (id, name, cb) {
-        let data = [{
+        let data = {
             name: name
-        }];
-        storage('PATCH', "/tables/failuretypes/rows?filter=id=" + id, data, function (error, response, body) {
+        };
+        storage('PATCH', "/tables/failuretypes/rows?filter=id='" + id +"'", data, function (error, response, body) {
             if (!error) {
                 cb(false, { message: "Failure Type is updated" })
             } else {
@@ -43,7 +43,7 @@ module.exports = {
         })
     },
     delete: function(id, cb){
-        storage('DELETE', "/tables/failuretypes/rows?filter=id=" + id, {}, function(error, response, body){
+        storage('DELETE', "/tables/failuretypes/rows?filter=id='" + id +"'", {}, function(error, response, body){
             if(!error){
                 cb(false, {message: "Failure Type is deleted"})
             }else{

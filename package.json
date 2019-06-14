@@ -23,6 +23,7 @@
    "scripts": {
       "boot": "npm install && cd frontend/failuremanager && npm install && ng build --prod --aot --deploy-url=\"/failuremanager/\" --base-href=\"/failuremanager/\" ",
       "dev": "npm install && cd frontend/failuremanager && npm install && ng build",
+      "ang": "cd frontend/failuremanager && ng build",
       "start": "node ./bin/be/index.js"
    },
    "author": "vfos",
