@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26549e5a-cd72-4d42-962f-d08cc659cc65" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/be/DAL/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/be/controllers/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/controllers/stats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/be/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/DAL/alarms.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/DAL/alarms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/be/controllers/alarms.js" beforeDir="false" afterPath="$PROJECT_DIR$/bin/be/controllers/alarms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/models/stats.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/models/stats.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,50 +22,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/DAL/interventions.js">
+        <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+            <state relative-caret-position="340">
+              <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="138" selection-start-line="8" selection-start-column="138" selection-end-line="8" selection-end-column="138" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/be/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -101,11 +70,44 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="90">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="52" column="165" selection-start-line="52" selection-start-column="165" selection-end-line="52" selection-end-column="165" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="73" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="41" column="118" selection-start-line="41" selection-start-column="118" selection-end-line="41" selection-end-column="118" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -175,7 +177,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.html" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-new/user-new.component.ts" />
-        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user-detail/user-detail.component.ts" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/user/user.component.ts" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.html" />
@@ -198,11 +199,8 @@
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention.component.ts" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-detail/intervention-detail.component.html" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.html" />
-        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" />
-        <option value="$PROJECT_DIR$/bin/be/controllers/alarms.js" />
         <option value="$PROJECT_DIR$/bin/be/controllers/interventions.js" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm.component.ts" />
-        <option value="$PROJECT_DIR$/bin/be/DAL/alarms.js" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.ts" />
         <option value="$PROJECT_DIR$/bin/be/DAL/interventions.js" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-detail/alarm-detail.component.ts" />
@@ -214,6 +212,10 @@
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/models/stats.model.ts" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts" />
+        <option value="$PROJECT_DIR$/bin/be/DAL/alarms.js" />
+        <option value="$PROJECT_DIR$/bin/be/controllers/alarms.js" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts" />
+        <option value="$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts" />
       </list>
     </option>
   </component>
@@ -228,11 +230,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="2" />
-    <option name="width" value="1934" />
-    <option name="height" value="1036" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="220" />
+    <option name="y" value="30" />
+    <option name="width" value="1448" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -307,7 +309,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="alarm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
@@ -316,7 +318,18 @@
               <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="alarm" type="462c0819:PsiDirectoryNode" />
+              <item name="alarm-manual" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="failuremanager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="failuremanager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -391,8 +404,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.ang" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.ang" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.boot" />
       </list>
@@ -410,24 +423,24 @@
       <updated>1560352160136</updated>
       <workItem from="1560352162657" duration="12217000" />
       <workItem from="1560443907802" duration="4256000" />
-      <workItem from="1560519983465" duration="35619000" />
+      <workItem from="1560519983465" duration="37482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53484000" />
+    <option name="totallyTimeSpent" value="55347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="220" y="30" width="1448" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.195629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2644092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.30769232" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26435536" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3023544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37393767" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -448,19 +461,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/settings/settings.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="79" column="146" selection-start-line="79" selection-start-column="146" selection-end-line="79" selection-end-column="146" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarmtypes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/navbar/navbar.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -703,16 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/intervention/intervention-manual/intervention-manual.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -743,16 +733,6 @@
           <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="97" column="2" selection-start-line="97" selection-start-column="2" selection-end-line="97" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -798,13 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarms.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="23" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/be/controllers/stats.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -838,8 +811,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="90">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/DAL/alarms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/be/controllers/alarms.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/services/data.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="52" column="165" selection-start-line="52" selection-start-column="165" selection-end-line="52" selection-end-column="165" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/failuremanager/src/app/components/alarm/alarm-manual/alarm-manual.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="41" column="118" selection-start-line="41" selection-start-column="118" selection-end-line="41" selection-end-column="118" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>

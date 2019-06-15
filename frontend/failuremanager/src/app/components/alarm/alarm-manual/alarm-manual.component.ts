@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./alarm-manual.component.css']
 })
 export class AlarmManualComponent implements OnInit {
-  timestamp: Date = new Date();
+  timestamp: string = JSON.stringify(new Date());
   codes: AlarmType[];
   selectedCode: AlarmType;
   types: FailureType[];
@@ -30,18 +30,16 @@ export class AlarmManualComponent implements OnInit {
   }
 
   createAlarm(form: NgForm){
-    console.log(form.value);
-    const timestamp = form.value.timestamp;
+    const timestamp = this.timestamp;
     const status = 'Activated';
-    const code = form.value.code.code;
-    const name = form.value.code.name;
-    const type = ""; // esto lo asigna MASS
-    const machine= form.value.machine;
+    const code = this.selectedCode.code;
+    const type = 1; // esto lo asigna MASS
+    const machine= this.selectedMachine.id;
     const company = this.authService.getCompany();
     const origin = "manual";
     const comment = form.value.comment;
     // (id, timestamp, status, code, name, type, machine, company, origin, comment)
-    this.dataService.createAlarm(timestamp, status, code, name, type, machine, company, origin, comment).subscribe(data => {form.reset(); this.router.navigate(['/alarms']);});;
+    this.dataService.createAlarm(timestamp, status, code, type, machine, company, origin, comment).subscribe(data => {form.reset(); this.router.navigate(['/alarms']);});
   }
 
 }

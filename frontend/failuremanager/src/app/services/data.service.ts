@@ -50,12 +50,11 @@ export class DataService {
     return this.http.patch(environment.apiUrl + '/alarms?id=' + id, {status: status});
   }
 
-  createAlarm(timestamp: Date, status: string, code: string, name: string, type: string, machine: string, company: string, origin: string, comment: string) {
+  createAlarm(timestamp: string, status: string, code: string, type: number, machine: number, company: string, origin: string, comment: string): Observable<Object> {
     return this.http.post(environment.apiUrl + '/alarms', {
       timestamp: timestamp,
       status: status,
       code: code,
-      name: name,
       type: type,
       machine: machine,
       company: company,

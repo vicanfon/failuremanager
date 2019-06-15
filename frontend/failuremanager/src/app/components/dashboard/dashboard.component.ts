@@ -15,7 +15,7 @@ import {forEach} from "@angular/router/src/utils/collection";
 export class DashboardComponent implements OnInit {
 
   machines: Machine[];
-  stats: object ={
+  stats ={
     Detected: 0,
     Activated: 0,
     Rejected: 0,

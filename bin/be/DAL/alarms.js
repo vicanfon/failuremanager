@@ -50,7 +50,7 @@ module.exports = {
   },
   updateStatus: function(alarmId, newStatus,cb){
     storage('PATCH', "/tables/alarms/rows?filter=id='" + alarmId + "'", {status: newStatus}, function(error, response, body){
-      console.log("response:"+JSON.stringify(response));
+      // console.log("response:"+JSON.stringify(response));
       if(!error){
         cb(false, {message: "Alarm is updated"})
       }else{
@@ -58,7 +58,7 @@ module.exports = {
       }
     })
   },
-  create: function (timestamp, status, code, name, type, machine, company, origin, comment, cb) {
+  create: function (timestamp, status, code, type, machine, company, origin, comment, cb) {
     let data = [{
       timestamp: timestamp,
       status: status,
@@ -70,6 +70,7 @@ module.exports = {
       comment: comment
     }];
     storage('POST', "/tables/alarms/rows", data, function (error, response, body) {
+      console.log("response:"+JSON.stringify(response));
       if (!error) {
         cb(false, { message: "Alarm is created" })
       } else {
