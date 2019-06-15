@@ -31,9 +31,9 @@ export class AlarmDetailComponent implements OnInit {
 
 
   saveAlarm(form: NgForm){
-    console.log(form);
-    console.log("saving data:" + this.alarm.id + this.alarm.timestamp + this.alarm.status + this.alarm.code + this.alarm.name + this.selectedType.id + this.alarm.m_id + this.alarm.company + this.alarm.origin + form.value.comment);
-    this.dataService.editAlarm(this.alarm.id, this.alarm.timestamp, this.alarm.status, this.alarm.code, +this.selectedType.id, this.alarm.m_id, this.alarm.company, this.alarm.origin, form.value.comment).subscribe(data => {this.ref.close();});
+    // console.log(form);
+    // console.log("saving data:" + this.alarm.id + this.alarm.timestamp + this.alarm.status + this.alarm.code + this.alarm.name +"-"+ this.selectedType.id +"-"+ this.alarm.m_id + this.alarm.company + this.alarm.origin + form.value.comment);
+    this.dataService.editAlarm(this.alarm.id, this.alarm.timestamp, this.alarm.status, this.alarm.code, this.selectedType.id, this.alarm.m_id, this.alarm.company, this.alarm.origin, form.value.comment).subscribe(data => {this.ref.close();});
     // send notification to mass
   }
 
@@ -47,19 +47,21 @@ export class AlarmDetailComponent implements OnInit {
 
   createIntervention(){
     const ref = this.dialogService.open(InterventionManualComponent, {
-      data: {alarmid: this.alarm.id },
+      data: this.alarm.id,
       header: 'Create Intervention',
       width: '85%',
       contentStyle: {"max-height": "90vw", "overflow": "auto"}
     });
+    ref.onClose.subscribe(x => this.ref.close());
   }
 
   currentIntervention(){
     const ref = this.dialogService.open(InterventionDetailComponent, {
-      data: {alarmid: this.alarm.id },
+      data: this.alarm.id,
       header: 'Intervention',
       width: '85%',
       contentStyle: {"max-height": "90vw", "overflow": "auto"}
     });
+    ref.onClose.subscribe(x => this.ref.close());
   }
 }

@@ -64,7 +64,7 @@ export class DataService {
     });
   }
 
-  editAlarm(id: number, timestamp: Date, status: string, code: string, type: number, machine: number, company: string, origin: string, comment: string) {
+  editAlarm(id: number, timestamp: Date, status: string, code: string, type: string, machine: number, company: string, origin: string, comment: string) {
     return this.http.patch(environment.apiUrl + '/alarms?id=' + id, {
       timestamp: timestamp,
       status: status,

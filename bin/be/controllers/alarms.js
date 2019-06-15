@@ -36,7 +36,7 @@ module.exports = {
   },
   create: function (req, res) {
     //body: {name,description}
-    if (req.body.timestamp && req.body.status && req.body.code && req.body.name && req.body.type && req.body.machine && req.body.company && req.body.origin && req.body.comment) {
+    if (req.body.timestamp && req.body.status && req.body.code && req.body.name && req.body.type && req.body.machine && req.body.company && req.body.origin) {
       dal.alarms.create(req.body.timestamp, req.body.status, req.body.code, req.body.name, req.body.type, req.body.machine, req.body.company, req.body.origin, req.body.comment, function (err, answer) {
         if (!err) {
           res.status(201).json(answer);
@@ -49,8 +49,8 @@ module.exports = {
     }
   },
   update: function (req, res) {
-    // console.log("BODY", req.body)
-    if (req.query.id && req.body.timestamp && req.body.status && req.body.code && req.body.type && req.body.machine && req.body.company && req.body.origin && req.body.comment) {
+    console.log("BODY", req.body)
+    if (req.query.id && req.body.timestamp && req.body.status && req.body.code && req.body.type && req.body.machine && req.body.company && req.body.origin) {
       dal.alarms.update(req.query.id, req.body.timestamp, req.body.status, req.body.code, req.body.type, req.body.machine, req.body.company, req.body.origin, req.body.comment, function (err, answer) {
         if (!err) {
           res.status(200).send(answer);

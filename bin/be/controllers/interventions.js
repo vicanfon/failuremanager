@@ -44,7 +44,7 @@ module.exports = {
   },
   create: function (req, res) {
     //body: {name,description}
-    if (req.body.solution && req.body.comment && req.body.timestamp && req.body.duration && req.body.status) {
+    if (req.body.solution && req.body.timestamp && req.body.duration && req.body.status) {
       dal.interventions.create(req.body.solution, req.body.comment, req.body.timestamp, req.body.duration, req.body.status, function (err, answer) {
         if (!err) {
           res.status(201).json(answer);

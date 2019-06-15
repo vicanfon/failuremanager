@@ -35,6 +35,7 @@ module.exports = {
     },
     getByAlarmId: function(alarmID, cb){
         storage('GET', "/tables/interventions_alarms/rows?filter=idalarm=" + "'" + alarmID+ "'", {}, function (error, response, body) {
+            console.log("response:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
@@ -72,6 +73,7 @@ module.exports = {
             status: status
         }];
         storage('POST', "/tables/interventions/rows", data, function (error, response, body) {
+            console.log("response:"+JSON.stringify(response));
             if (!error) {
                 cb(false, { message: "Intervention is created" })
             } else {

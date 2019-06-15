@@ -6,8 +6,8 @@
     <button class="btn btn-primary" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Activated')">Activate</button>
     <button class="btn orange" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Dismissed')">Dismiss</button>
     <button (click)="createIntervention()" class="btn btn-primary blue" type="submit" *ngIf="authService.getRole()=='mass' && (alarm.status == 'Activated' || alarm.status == 'Rejected')">Intervene</button>
-    <button (click)="currentIntervention()" *ngIf="alarm.status == 'Intervened'" class="btn blue">Intervention</button>
-    <button (click)="saveAlarm(f)" *ngIf="authService.getCompany()=='mass' || alarm.status == 'Detected'" class="btn blue">Save</button>
+    <button (click)="currentIntervention()" *ngIf="alarm.status == 'Intervened' || alarm.status == 'Accepted' || alarm.status == 'Rejected'" class="btn blue">Intervention</button>
+    <button (click)="saveAlarm(f)" *ngIf="alarm.status == 'Activated' || alarm.status == 'Detected'" class="btn blue">Save</button>
   </div>
   <div class="row">
     <div class="form-group col-md-3">

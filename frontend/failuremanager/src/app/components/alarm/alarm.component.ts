@@ -47,7 +47,7 @@ constructor(private dataService: DataService, public authService: AuthService, p
       width: '85%',
       contentStyle: {'max-height': '95vw', 'overflow': 'auto'}
     });
-    ref.onClose.subscribe(x => console.log(x));
+    ref.onClose.subscribe(x => this.getAlarms());
   }
 
   getAlarms(): void {
