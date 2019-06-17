@@ -6,7 +6,19 @@ module.exports = {
       //get project by id
       dal.stats.getByCompany(req.query.company, function (err, answer) {
         if (!err) {
-          res.status(200).send(answer);
+          dal.stats.getMaxFailureByCompany(req.query.company, function (err2, answer2) {
+            if (!err2) {
+              dal.stats.getTimeStatsByCompany(req.query.company,function (err3, answer3) {
+                if (!err3) {
+                  res.status(200).send({alarmstats: answer, failurestats: answer2, timestats: answer3});
+                }else{
+                  res.status(500).end();
+                }
+              })
+          }else{
+              res.status(500).end();
+            }
+          })
         } else {
           res.status(500).end();
         }
@@ -15,7 +27,19 @@ module.exports = {
       //get project by id
       dal.stats.get(function (err, answer) {
         if (!err) {
-          res.status(200).send(answer);
+          dal.stats.getMaxFailure(function (err2, answer2) {
+            if (!err2) {
+              dal.stats.getTimeStats(function (err3, answer3) {
+                if (!err3) {
+                  res.status(200).send({alarmstats: answer, failurestats: answer2, timestats: answer3});
+                }else{
+                  res.status(500).end();
+                }
+              })
+            }else{
+              res.status(500).end();
+            }
+          })
         } else {
           res.status(500).end();
         }

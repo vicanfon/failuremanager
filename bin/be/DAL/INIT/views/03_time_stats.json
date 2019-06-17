@@ -1,0 +1,4 @@
+{
+  "view_definition_query":"select interventions.id as id, interventions.timestamp as int_timestamp, alarms.timestamp as alm_timestamp, DATEDIFF (day, interventions.timestamp, alarms.timestamp) as NumberOfDays from failuremanager.interventions as interventions left join failuremanager.alarms as alarms on interventions.idAlarm = alarms.id",
+  "view_name":"time_stats"
+}

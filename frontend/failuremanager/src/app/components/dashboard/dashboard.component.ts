@@ -19,11 +19,13 @@ export class DashboardComponent implements OnInit {
     Detected: 0,
     Activated: 0,
     Rejected: 0,
-    Intervened: 0
+    Intervened: 0,
+    avgSolvingTime: 0
   };
   data: any;
-  
-  // hellomsg : any;
+  codelabels: string[] = [];
+  freqfailures: number[] = [];
+
 
   constructor(private dataService: DataService, public authService: AuthService) { }
 
@@ -35,19 +37,21 @@ export class DashboardComponent implements OnInit {
   }
 
   processStats(stats: any){
-    stats.forEach((element) => {
-      console.log(element);
-    });
-    stats.forEach((element)=> this.stats[element.status]= element.count);
-    console.log(this.stats);
+    // console.log("stats:" + JSON.stringify(stats));
+    stats.alarmstats.forEach((element)=> this.stats[element.status]= element.count);
+
+    // console.log("failurestats:" + JSON.stringify(stats.failurestats));
+    stats.failurestats.forEach((element)=> {this.codelabels.push(element.type); this.freqfailures.push(element.count);});
+    this.showChart();
+    this.stats.avgSolvingTime = stats.timestats.avg;
   }
 
-  showChart(ff: FrequentFailures){
+  showChart(){
     this.data = {
-      labels: ff.codes,
+      labels: this.codelabels,
       datasets: [
         {
-          data: ff.frequencies,
+          data: this.freqfailures,
           backgroundColor: [
             "#FF6384",
             "#36A2EB",
