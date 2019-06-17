@@ -34,7 +34,7 @@
     },
     {
       "name":"idAlarm",
-      "type":"serial"
+      "type":"integer"
     }
   ],
   "constraints":[
