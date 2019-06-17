@@ -1,7 +1,4 @@
 {
-    "jwt":{
-        "secret":"wertyuioplkjhgfds"
-    },
     "storage":{
         "url":"http://ec2-35-181-152-100.eu-west-3.compute.amazonaws.com/vfrelstorage/vfos/rel/1.0.5",
         "contentType":"application/json",
@@ -17,10 +14,5 @@
             "tables": "/INIT/tables",
             "views": "/INIT/views"
         }
-    },
-    "email":{
-        "USEREMAIL": "vfos.notify@gmail.com",
-        "USERPWD": "21645FCTunl",
-        "EMAILON": "false"
     }
 }
