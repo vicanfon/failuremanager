@@ -7,8 +7,9 @@
       "type":"varchar"
     },
     {
-      "name":"idMachine",
-      "type":"serial"
+      "name":"id",
+      "size":10,
+      "type":"varchar"
     }
   ],
   "constraints":[

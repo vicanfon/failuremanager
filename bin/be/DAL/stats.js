@@ -5,7 +5,7 @@ const storage = require("./storageRequester");
 module.exports = {
     getByCompany: function (company, cb) {
         storage('GET', "/tables/alarms/rows?query_columns_specification=status,count(status)&filter=company='"+ company+ "'&group_by=status", {}, function (error, response, body) {
-            console.log("response1:"+JSON.stringify(response));
+            // console.log("response1:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
@@ -37,7 +37,7 @@ module.exports = {
     },
     getMaxFailureByCompany: function (company, cb) {
         storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&filter=company='"+ company+ "'&group_by=type", {}, function (error, response, body) {
-            console.log("response1:"+JSON.stringify(response));
+            // console.log("response1:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
@@ -53,7 +53,7 @@ module.exports = {
     },
     getMaxFailure: function (cb) {
         storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&group_by=type", {}, function (error, response, body) {
-            console.log("response2:"+JSON.stringify(response));
+            // console.log("response2:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
@@ -69,7 +69,7 @@ module.exports = {
     },
     getTimeStatsByCompany: function (company, cb) {
         storage('GET', "/tables/time_stats/rows?query_columns_specification=AVG(numberofdays)&filter=company='"+ company+ "'", {}, function (error, response, body) {
-            console.log("response1:"+JSON.stringify(response));
+            // console.log("response1:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);
@@ -85,7 +85,7 @@ module.exports = {
     },
     getTimeStats: function (cb) {
         storage('GET', "/tables/time_stats/rows?query_columns_specification=AVG(numberofdays)", {}, function (error, response, body) {
-            console.log("response2:"+JSON.stringify(response));
+            // console.log("response2:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
                     json = JSON.parse(response.body);

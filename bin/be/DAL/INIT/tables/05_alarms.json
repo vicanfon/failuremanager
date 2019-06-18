@@ -38,7 +38,8 @@
     {
       "allow_null":false,
       "name":"idMachine",
-      "type":"integer"
+      "size":10,
+      "type":"varchar"
     },
     {
       "allow_null":false,

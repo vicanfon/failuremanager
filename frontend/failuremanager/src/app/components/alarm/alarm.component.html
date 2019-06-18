@@ -10,7 +10,7 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <p-table #dt (onRowSelect)="show($event)" [columns]="cols" [value]="alarms" selectionMode="single" [responsive]="true" [(selection)]="selectedAlarm" [paginator]="true" [rows]="5">
+      <p-table #dt (onRowSelect)="show($event)" [columns]="cols" [value]="alarms" selectionMode="single" sortField="timestamp" sortOrder="-1" [responsive]="true" [(selection)]="selectedAlarm" [paginator]="true" [rows]="5">
         <ng-template pTemplate="caption">
           <div style="text-align: right">
             <i class="fa fa-search" style="margin:4px 4px 0 0"></i>

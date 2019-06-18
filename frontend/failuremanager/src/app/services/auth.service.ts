@@ -22,7 +22,7 @@ export class AuthService {
 
   login(username: string, password: string){
     // call to storage to create login and password account
-    this.dataService.getUser(username).subscribe((user)=> {console.log("user:" + user); this.validate(user[0])});
+    this.dataService.getUser(username).subscribe((user)=> {this.validate(user[0])});
 
     /*if (username === "mass" && password === "1234"){
       this.token = "abc";
@@ -44,6 +44,7 @@ export class AuthService {
       // this.token = "abc";
       this.role = user.role;
       this.company = user.company;
+      localStorage.setItem('vfostoken', this.company);
       this.router.navigate(['/dashboard']);
     }else {
       this.messageService.add('User not registered');
@@ -57,16 +58,18 @@ export class AuthService {
   logout(){
 //    this.token = null;
     this.company = null;
+    localStorage.removeItem('vfostoken');
     this.router.navigate(['/']);
   }
 
   isAuthenticated(){
-    return this.company != null;
+    // console.log("vfostoken:"+ localStorage.getItem('vfostoken'));
+    return localStorage.getItem('vfostoken') != null;
   }
   getRole(){
-    return this.role;
+    return localStorage.getItem('vfostoken');
   }
   getCompany(){
-    return this.company;
+    return localStorage.getItem('vfostoken');
   }
 }

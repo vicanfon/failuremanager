@@ -107,7 +107,7 @@ export class SettingsComponent implements OnInit {
   }
 
   delete_m() {
-    this.dataService.deleteMachine(+this.machine.id).subscribe(data=>{this.refreshdata();});
+    this.dataService.deleteMachine(this.machine.id).subscribe(data=>{this.refreshdata();});
     this.displayDialog_m = false;
   }
 

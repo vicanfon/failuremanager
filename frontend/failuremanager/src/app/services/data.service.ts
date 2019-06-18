@@ -103,7 +103,7 @@ export class DataService {
       solution: solution,
       timestamp: timestamp,
       duration: duration,
-      alarmid: alarmid,
+      idalarm: alarmid,
       status: status,
       comment: ''
     });
@@ -194,7 +194,7 @@ export class DataService {
     return this.http.patch(environment.apiUrl + '/machines?id='+id, {name: name});
   }
 
-  deleteMachine(id: number) {
+  deleteMachine(id: string) {
     return this.http.delete(environment.apiUrl + '/machines?id='+id);
   }
 

@@ -2,13 +2,10 @@
   <div class="row">
     <h3>Details: {{alarm.name}}</h3>
   </div>
-  <div>
-  {{alarm.id}}
-</div>
   <div class="row">
     <button class="btn btn-primary" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Activated')">Activate</button>
     <button class="btn orange" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Dismissed')">Dismiss</button>
-    <button (click)="createIntervention()" class="btn btn-primary blue" type="submit" *ngIf="authService.getRole()=='mass' && (alarm.status == 'Activated' || alarm.status == 'Rejected')">Intervene</button>
+    <button (click)="createIntervention()" class="btn btn-primary blue" type="submit" *ngIf="authService.getRole()=='mass' && (alarm.status == 'Activated')">Intervene</button>
     <button (click)="currentIntervention()" *ngIf="alarm.status == 'Intervened' || alarm.status == 'Accepted' || alarm.status == 'Rejected'" class="btn blue">Intervention</button>
     <button (click)="saveAlarm(f)" *ngIf="alarm.status == 'Activated' || alarm.status == 'Detected'" class="btn blue">Save</button>
   </div>
@@ -56,6 +53,11 @@
     <div class="form-group col-md-6">
       <span for="comment">Comment:</span>
       <textarea  style="height: 100px;" id="comment" name="comment" [(ngModel)]="alarm.comment" [readOnly]="alarm.status != 'Detected'"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="right-aligned">
+      <span disabled="">{{alarm.id}}</span>
     </div>
   </div>
 </form>

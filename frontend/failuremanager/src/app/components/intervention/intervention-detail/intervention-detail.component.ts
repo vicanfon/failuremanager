@@ -42,9 +42,11 @@ export class InterventionDetailComponent implements OnInit {
   }
 
   editIntervention(form: NgForm) {
-    console.log("edit data:" + this.intervention.id +"-"+ this.intervention.solution+"-"+this.intervention.timestamp+"-"+this.intervention.duration+"-"+this.config.data+"-"+ this.intervention.status+"-"+ form.value.comment)
-    this.dataService.editIntervention(this.intervention.id, this.intervention.solution,this.intervention.timestamp,this.intervention.duration,this.config.data, this.intervention.status, form.value.comment).subscribe(data=>{this.ref.close()});;
+    // console.log("edit data:" + this.intervention.id + "-" + this.intervention.solution + "-" + this.intervention.timestamp + "-" + this.intervention.duration + "-" + this.config.data + "-" + this.intervention.status + "-" + form.value.comment)
+    this.dataService.editIntervention(this.intervention.id, this.intervention.solution, this.intervention.timestamp, this.intervention.duration, this.config.data, this.intervention.status, form.value.comment).subscribe(data => {
+      this.dataService.changeStatusAlarm(this.config.data, "Intervened").subscribe(data2 => {
+        this.ref.close();
+      });
+    });
   }
-
-
 }

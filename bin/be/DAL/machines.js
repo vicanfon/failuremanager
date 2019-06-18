@@ -45,6 +45,7 @@ module.exports = {
     },
     delete: function(id, cb){
         storage('DELETE', "/tables/machines/rows?filter=id='" + id +"'", {}, function(error, response, body){
+            console.log("message:"+JSON.stringify(response));
             if(!error){
                 cb(false, {message: "Machine is deleted"})
             }else{

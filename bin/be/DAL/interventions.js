@@ -64,14 +64,16 @@ module.exports = {
             }
         })
     },
-    create: function (solution, comment, timestamp, duration, status, cb) {
+    create: function (solution, comment, timestamp, duration, status, idalarm, cb) {
         let data = [{
             solution: solution,
             comment: comment,
             timestamp: timestamp,
             duration: duration,
-            status: status
+            status: status,
+            idalarm: idalarm
         }];
+        console.log("query:"+JSON.stringify(data));
         storage('POST', "/tables/interventions/rows", data, function (error, response, body) {
             console.log("response:"+JSON.stringify(response));
             if (!error) {
