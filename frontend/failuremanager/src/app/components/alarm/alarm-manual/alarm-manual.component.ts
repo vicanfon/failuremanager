@@ -14,7 +14,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./alarm-manual.component.css']
 })
 export class AlarmManualComponent implements OnInit {
-  timestamp: string = JSON.stringify(new Date());
+  timestamp: string;
   codes: AlarmType[];
   selectedCode: AlarmType;
   types: FailureType[];
@@ -24,6 +24,7 @@ export class AlarmManualComponent implements OnInit {
   constructor(public dataService: DataService, public authService: AuthService, private  router: Router) { }
 
   ngOnInit() {
+    this.timestamp = JSON.stringify(new Date());
     this.dataService.getAlarmTypes().subscribe(alarmtypes => this.codes = alarmtypes);
     this.dataService.getFailureTypes().subscribe(failuretypes => this.types = failuretypes);
     this.dataService.getMachines().subscribe(machines => this.machines = machines);

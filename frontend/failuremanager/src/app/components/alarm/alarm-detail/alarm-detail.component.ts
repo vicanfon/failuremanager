@@ -52,7 +52,7 @@ export class AlarmDetailComponent implements OnInit {
       width: '85%',
       contentStyle: {"max-height": "90vw", "overflow": "auto"}
     });
-    ref.onClose.subscribe(x => this.ref.close());
+    ref.onClose.subscribe(x => this.dataService.getAlarm(this.alarm.id).subscribe(alarm => this.alarm = alarm));
   }
 
   currentIntervention(){
@@ -62,6 +62,6 @@ export class AlarmDetailComponent implements OnInit {
       width: '85%',
       contentStyle: {"max-height": "90vw", "overflow": "auto"}
     });
-    ref.onClose.subscribe(x => this.ref.close());
+    ref.onClose.subscribe(x => this.dataService.getAlarm(this.alarm.id).subscribe(alarm => this.alarm = alarm));
   }
 }

@@ -2,6 +2,9 @@
   <div class="row">
     <h3>Details: {{alarm.name}}</h3>
   </div>
+  <div>
+  {{alarm.id}}
+</div>
   <div class="row">
     <button class="btn btn-primary" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Activated')">Activate</button>
     <button class="btn orange" type="submit" *ngIf="authService.getRole()!='mass' && alarm.status == 'Detected'" (click)="changeStatusAlarm(alarm.id,'Dismissed')">Dismiss</button>

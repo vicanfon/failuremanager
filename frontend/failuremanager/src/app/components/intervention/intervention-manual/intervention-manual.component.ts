@@ -12,13 +12,14 @@ import {DialogService, DynamicDialogConfig, DynamicDialogRef} from 'primeng/api'
 })
 export class InterventionManualComponent implements OnInit {
 
-  timestamp: string = JSON.stringify(new Date());
+  timestamp: string;
   alarmid: number;
 
   constructor(public dataService: DataService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) { }
 
 
   ngOnInit() {
+      this.timestamp = JSON.stringify(new Date());
       this.alarmid = this.config.data;
   }
 
@@ -27,6 +28,7 @@ export class InterventionManualComponent implements OnInit {
     const status = 'Open';
     const duration = form.value.duration;
     const solution = form.value.solution;
+    console.log("createIntervention data:"+solution+"-"+ timestamp+"-"+duration+"-"+this.alarmid+"-"+status);
     this.dataService.createIntervention(solution, timestamp, duration,this.alarmid, status).subscribe(data => {
       form.reset();
       this.dataService.changeStatusAlarm(this.alarmid,'Intervened').subscribe(data2 => this.close());

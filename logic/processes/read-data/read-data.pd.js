@@ -129,5 +129,37 @@ router.route('/messages').get(
 	}
 )
 
+/**
+ * get the messages that came from external driver
+ */
+router.route('/edgedriver').get(
+	function (req, res, next) {
+		let data = JSON.parse(req.body.message);
+		let options = {
+    url: 'http://ec2-35-181-152-100.eu-west-3.compute.amazonaws.com/vfrelstorage/vfos/rel/1.0.5/databases/failuremanager/tables/alarms/rows',
+    method: 'post',
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Authorization": "Basic cG9zdGdyZXM6dmZvcw=="
+
+    },
+    body: JSON.stringify([{
+	 timestamp: message.timestamp,
+     status: "Detected",
+     idalarmtype: message.data,
+     idfailuretype: 1,
+     idmachine: message._did,
+     company: "sis",
+     origin: "automatic",
+     comment: ""}])
+  }
+  
+  request(options, function (err, answer) {
+      console.log("answer:"+JSON.stringify(answer));
+  });
+	}
+)
+
 
 module.exports = (app) => router;

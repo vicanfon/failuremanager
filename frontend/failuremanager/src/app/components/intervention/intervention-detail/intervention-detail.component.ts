@@ -25,7 +25,7 @@ export class InterventionDetailComponent implements OnInit {
     /*if (this.config.data && !this.intervention){
       this.intervention= this.config.data;
     }*/
-    console.log("alarmid:"+this.config.data);
+    // console.log("alarmid:"+this.config.data);
     this.dataService.getInterventionbyAlarm(this.config.data).subscribe(intervention => {this.intervention = intervention; console.log("intervention: " + JSON.stringify(this.intervention));});
   }
 
