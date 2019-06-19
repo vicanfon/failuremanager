@@ -35,8 +35,7 @@ module.exports = {
     //res.status(201).json({awesome: "working"})
   },
   create: function (req, res) {
-    console.log("body:"+req.body);
-    if (req.body.timestamp && req.body.status && req.body.code && req.body.type && req.body.machine && req.body.company && req.body.origin) {
+    if (req.body.timestamp && req.body.status && req.body.code && req.body.machine && req.body.company && req.body.origin) {
       dal.alarms.create(req.body.timestamp, req.body.status, req.body.code, req.body.type, req.body.machine, req.body.company, req.body.origin, req.body.comment, function (err, answer) {
         if (!err) {
           res.status(201).json(answer);
