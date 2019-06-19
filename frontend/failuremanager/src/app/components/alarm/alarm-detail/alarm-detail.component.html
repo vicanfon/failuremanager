@@ -20,7 +20,7 @@
     </div>
     <div *ngIf="authService.getCompany()=='mass' && alarm.status == 'Activated'" class="form-group col-md-3">
       <span for="code">Alarm Code</span>
-<p-dropdown name="code" [options]="codes" [(ngModel)]="selectedCode" placeholder="Select a code" optionLabel="code" [showClear]="true"></p-dropdown>
+      <p-dropdown name="code" [options]="codes" [(ngModel)]="selectedCode" [filter]="true" placeholder="Select a code" optionLabel="code" [showClear]="true"></p-dropdown>
     </div>
     <!--
     <div class="form-group col-md-3">
@@ -39,8 +39,9 @@
   <div class="row">
     <div *ngIf="authService.getCompany()=='mass' && alarm.status == 'Activated'" class="form-group col-md-6">
       <span for="name">Name</span>
-    <input ngModel type="text" id="name" name="name" value="{{selectedCode ? selectedCode.name: ''}}" readonly>
-  </div>
+
+      <input ngModel type="text" id="name" name="name" value="{{selectedCode ? selectedCode.name: ''}}" readonly>
+    </div>
     <div *ngIf="authService.getCompany()=='mass' && alarm.status == 'Activated'" class="form-group col-md-3">
       <span for="type">Type</span><tr></tr>
       <p-dropdown name="type" [options]="types" [(ngModel)]="selectedType" placeholder="Select a type" optionLabel="name" [showClear]="true"></p-dropdown>

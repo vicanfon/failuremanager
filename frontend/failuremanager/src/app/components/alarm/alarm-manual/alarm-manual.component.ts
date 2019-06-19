@@ -31,7 +31,7 @@ export class AlarmManualComponent implements OnInit {
   }
 
   createAlarm(form: NgForm){
-    const timestamp = JSON.stringify(this.timestamp);
+    const timestamp = this.timestamp.toLocaleString();
     const status = 'Activated';
     const code = '_manual';
     const type = 0; // esto lo asigna MASS

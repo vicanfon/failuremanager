@@ -24,7 +24,7 @@ export class InterventionManualComponent implements OnInit {
   }
 
   createIntervention(form: NgForm){
-    const timestamp = JSON.stringify(this.timestamp);
+    const timestamp = this.timestamp.toLocaleString();
     const status = 'Open';
     const duration = form.value.duration;
     const solution = form.value.solution;

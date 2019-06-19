@@ -59,7 +59,6 @@ try {
     throw err;
   }
 }
-
 /**
  * avoid cors
 */

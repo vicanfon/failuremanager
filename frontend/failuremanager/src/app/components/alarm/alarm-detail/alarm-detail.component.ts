@@ -19,7 +19,10 @@ export class AlarmDetailComponent implements OnInit {
   @Input() alarm: Alarm;
   types: FailureType[];
   selectedType: FailureType;
-    selectedCode: AlarmType;
+
+  selectedCode: AlarmType;
+    codes: AlarmType[];
+
 
   constructor(public authService: AuthService, private dataService: DataService, private dialogService: DialogService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) { }
 
@@ -29,6 +32,7 @@ export class AlarmDetailComponent implements OnInit {
       this.alarm = this.config.data;
     }
     this.dataService.getFailureTypes().subscribe(failuretypes => this.types = failuretypes);
+        this.dataService.getAlarmTypes().subscribe(alarmtypes => this.codes = alarmtypes);
   }
 
 
