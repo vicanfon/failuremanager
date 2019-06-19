@@ -36,7 +36,7 @@ module.exports = {
         })
     },
     getMaxFailureByCompany: function (company, cb) {
-        storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&filter=company='"+ company+ "'&group_by=type", {}, function (error, response, body) {
+        storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&filter=company='"+ company+ "' and type != 'GENERIC' &group_by=type", {}, function (error, response, body) {
             // console.log("response1:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {
@@ -52,7 +52,7 @@ module.exports = {
         })
     },
     getMaxFailure: function (cb) {
-        storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&group_by=type", {}, function (error, response, body) {
+        storage('GET', "/tables/alarmsbyCompany/rows?query_columns_specification=type,count(type)&filter=type != 'GENERIC' &group_by=type", {}, function (error, response, body) {
             // console.log("response2:"+JSON.stringify(response));
             if (!error) {
                 if (response.statusCode == 200) {

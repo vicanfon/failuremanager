@@ -3,6 +3,7 @@ import {NgForm} from '@angular/forms';
 import {AuthService} from '../../services/auth.service';
 import {DataService} from '../../services/data.service';
 import {User} from '../../models/user.model';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-signin',
@@ -11,9 +12,12 @@ import {User} from '../../models/user.model';
 })
 export class SigninComponent implements OnInit {
 
-  constructor(private authService: AuthService, private dataService: DataService) { }
+  constructor(private authService: AuthService, private router: Router, private dataService: DataService) { }
 
   ngOnInit() {
+    if(this.authService.isAuthenticated()){
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   onSignin(form: NgForm){
