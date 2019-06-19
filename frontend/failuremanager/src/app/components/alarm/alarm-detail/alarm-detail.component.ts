@@ -6,6 +6,7 @@ import {DialogService, DynamicDialogConfig, DynamicDialogRef} from 'primeng/api'
 import {InterventionManualComponent} from '../../intervention/intervention-manual/intervention-manual.component';
 import {InterventionDetailComponent} from '../../intervention/intervention-detail/intervention-detail.component';
 import {FailureType} from '../../../models/failure-type';
+import {AlarmType} from '../../../models/alarm-type.model';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -18,6 +19,7 @@ export class AlarmDetailComponent implements OnInit {
   @Input() alarm: Alarm;
   types: FailureType[];
   selectedType: FailureType;
+    selectedCode: AlarmType;
 
   constructor(public authService: AuthService, private dataService: DataService, private dialogService: DialogService, public ref: DynamicDialogRef, public config: DynamicDialogConfig) { }
 
@@ -33,7 +35,7 @@ export class AlarmDetailComponent implements OnInit {
   saveAlarm(form: NgForm){
     // console.log(form);
     // console.log("saving data:" + this.alarm.id + this.alarm.timestamp + this.alarm.status + this.alarm.code + this.alarm.name +"-"+ this.selectedType.id +"-"+ this.alarm.m_id + this.alarm.company + this.alarm.origin + form.value.comment);
-    this.dataService.editAlarm(this.alarm.id, this.alarm.timestamp, this.alarm.status, this.alarm.code, this.selectedType.id, this.alarm.m_id, this.alarm.company, this.alarm.origin, form.value.comment).subscribe(data => {this.ref.close();});
+    this.dataService.editAlarm(this.alarm.id, this.alarm.timestamp, this.alarm.status, this.selectedCode.code, this.selectedType.id, this.alarm.m_id, this.alarm.company, this.alarm.origin, form.value.comment).subscribe(data => {this.ref.close();});
     // send notification to mass
   }
 

@@ -33,11 +33,11 @@ export class AlarmManualComponent implements OnInit {
   createAlarm(form: NgForm){
     const timestamp = JSON.stringify(this.timestamp);
     const status = 'Activated';
-    const code = this.selectedCode.code;
-    const type = 1; // esto lo asigna MASS
+    const code = '_manual';
+    const type = 0; // esto lo asigna MASS
     const machine= this.selectedMachine.id;
     const company = this.authService.getCompany();
-    const origin = "Manual";
+    const origin = "manual";
     const comment = form.value.comment;
     // (id, timestamp, status, code, name, type, machine, company, origin, comment)
     this.dataService.createAlarm(timestamp, status, code, type, machine, company, origin, comment).subscribe(data => {form.reset(); this.router.navigate(['/alarms']);});
