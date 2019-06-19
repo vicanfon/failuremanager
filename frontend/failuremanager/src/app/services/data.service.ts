@@ -190,7 +190,7 @@ export class DataService {
     return this.http.post(environment.apiUrl + '/machines', {name: name});
   }
 
-  editMachine(id: number, name: string) {
+  editMachine(id: string, name: string) {
     return this.http.patch(environment.apiUrl + '/machines?id='+id, {name: name});
   }
 
