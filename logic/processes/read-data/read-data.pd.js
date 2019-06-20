@@ -59,7 +59,7 @@ function messageHandler(msg) {
 	 timestamp: message.timestamp,
      status: "Detected",
      idalarmtype: message.data,
-     idfailuretype: 1,
+     idfailuretype: 0,
      idmachine: message._did,
      company: "sis",
      origin: "automatic",
