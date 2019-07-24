@@ -47,7 +47,7 @@ function messageHandler(msg) {
 	// console.log("> messageHandler: msg.content = \"" + msg.content.toString() + "\"");
 	
 	  let options = {
-    url: 'http://ec2-35-181-152-100.eu-west-3.compute.amazonaws.com/vfrelstorage/vfos/rel/1.0.5/databases/failuremanager/tables/alarms/rows',
+    url: 'http://reverse-proxy/vfrelstorage/vfos/rel/1.0.5/databases/failuremanager/tables/alarms/rows',
     method: 'post',
     headers: {
       "Content-Type": "application/json",
@@ -84,7 +84,6 @@ function messageHandler(msg) {
 }
 
 communications.registerPublicationReceiver(messageHandler);
-communications.registerPrivateMessageReceiver(messageHandler);
 /**
  * end of archive section
  */
