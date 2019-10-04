@@ -98,7 +98,7 @@ export class SettingsComponent implements OnInit {
     this.displayDialog_ft = false;
   }
   create_m() {
-    this.dataService.createMachine(this.machine.name).subscribe(data=>{this.refreshdata();});
+    this.dataService.createMachine(this.machine.id, this.machine.name).subscribe(data=>{this.refreshdata();});
     this.displayDialog_m = false;
   }
   save_m() {

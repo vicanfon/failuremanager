@@ -187,8 +187,8 @@ export class DataService {
     return this.http.get<Machine>(environment.apiUrl + '/machines?id=' + id);
   }
 
-  createMachine(name: string) {
-    return this.http.post(environment.apiUrl + '/machines', {name: name});
+  createMachine(id: string, name: string) {
+    return this.http.post(environment.apiUrl + '/machines', {id: id, name: name});
   }
 
   editMachine(id: string, name: string) {

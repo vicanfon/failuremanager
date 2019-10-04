@@ -11,6 +11,6 @@ module.exports = function(method, path, payload, callback){
       "Authorization": config.storage.auth
     },
     body: JSON.stringify(payload)
-  }
+  };
   request(options, callback);
 }

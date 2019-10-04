@@ -104,6 +104,7 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   console.log('Listening on ' + bind);
+  console.log("vApp v6.3");
   console.log("INIT DB...");
   init();
 }
@@ -121,28 +122,19 @@ function init() {
       dal.init.tablesExistsAndCreates(function (tablesdone) {
         if (tablesdone) {
           console.log("Checking tables - DONE")
+          dal.init.populateDB(function (ok) {
+                if (ok) {
+                  console.log("Default users populated");
+                }else{
+                    console.log("Default users failed !!");
+                }});
           console.log("Checking views...");
           dal.init.viewsExistsAndCreates(function (viewsdone) {
             if (viewsdone) {
               console.log("Checking views - DONE");
-              console.log("Checking roles...");
-              dal.init.checkRoles(function (rolesExist) {
-                if (rolesExist) {
-                  console.log("Checking roles - DONE");
-                } else {
-                  console.log("Creating roles...");
-                  dal.init.createRoles(function (rolesdone) {
-                    if (rolesdone) {
-                      console.log("Creating roles - DONE")
-                    } else {
-                      console.log("NOT IMPLEMENTED :(")
-                    }
-                  })
-                }
-              })
-
+              
             } else {
-              console.log("NOT IMPLEMENTED :(")
+              console.log("NOT IMPLEMENTED :(");
               console.log("Creating roles...");
               dal.init.createRoles(function (rolesdone) {
                 if (rolesdone) {
@@ -166,8 +158,14 @@ function init() {
           console.log("Creating tables");
           dal.init.tablesExistsAndCreates(function (tablesdone) {
             if (tablesdone) {
-              console.log("Creating tables - DONE")
-              console.log("Checking views...");
+              console.log("Creating tables - DONE");
+              dal.init.populateDB(function (ok) {
+                if (ok) {
+                  console.log("Default users populated");
+                }else{
+                    console.log("Default users failed !!");
+                }});
+                console.log("Checking views...");
               dal.init.viewsExistsAndCreates(function (viewsdone) {
                 if (viewsdone) {
                   console.log("Creating views - DONE");
@@ -184,5 +182,5 @@ function init() {
         }
       })
     }
-  })
+  });
 }

@@ -172,12 +172,81 @@ module.exports = {
                 "Accept": config.storage.accept,
                 "Authorization": config.storage.auth
             },
-            body: config.storage.dataBaseName
+            body:  JSON.stringify({database_name: config.storage.dataBaseName })
+        }
+        console.log("body:" + JSON.stringify(Requestoptions.body));
+        console.log("Requestoptions:" + JSON.stringify(Requestoptions));
+        request(Requestoptions, function (error, response, body) {
+            console.log("error:" + error);
+            console.log("response:" + JSON.stringify(response));
+
+            if (!error) {
+                console.log("status", response.statusCode)
+                if (response.statusCode == 201) {
+                    cb(true);
+                } else {
+                    cb(false);
+                }
+            } else {
+                cb(false);
+            }
+        })
+    },
+    populateDB: function (cb) {
+        let Requestoptions = {
+            url: config.storage.url + '/databases/' + config.storage.dataBaseName + "/tables/users/rows",
+            method: 'POST',
+            headers: {
+                "Content-Type": config.storage.contentType,
+                "Accept": config.storage.accept,
+                "Authorization": config.storage.auth
+            },
+            body: JSON.stringify([
+                {
+                    mail: "mass",
+                    name: "mass_administrator",
+                    company: "mass",
+                    role: "mass"
+                },
+                {
+                    mail: "sis",
+                    name: "sis_administrator",
+                    company: "sis",
+                    role: "sis"
+                }
+            ])
         }
         request(Requestoptions, function (error, response, body) {
             console.log("error:" + error);
             console.log("response:" + JSON.stringify(response));
 
+            if (!error) {
+                console.log("status", response.statusCode)
+                if (response.statusCode == 201) {
+                    cb(true);
+                } else {
+                    cb(false);
+                }
+            } else {
+                cb(false);
+            }
+        });
+        let Requestoptions2 = {
+            url: config.storage.url + '/databases/' + config.storage.dataBaseName + "/tables/failuretypes/rows",
+            method: 'POST',
+            headers: {
+                "Content-Type": config.storage.contentType,
+                "Accept": config.storage.accept,
+                "Authorization": config.storage.auth
+            },
+            body: JSON.stringify([
+                {
+                    id: 0,
+                    name: "GENERIC"
+                }
+            ])
+        }
+        request(Requestoptions2, function (error, response, body) {
             if (!error) {
                 console.log("status", response.statusCode)
                 if (response.statusCode == 201) {

@@ -6,17 +6,18 @@ var request = require('request');
 
 let vfosMessagingPubsub = sdk.messaging;
 var broker = sdk.config.MESSAGING_PUBSUB.SERVER_URL;
-var userName = "archiver1";
+var userName = "vApp12";
 var domain = "pt.vfos";
-var routingKeys = ["#"];
-
+var routingKeys = ["pt.vfos.drivers.#"];
 
 /**
  * 
  *  begging of section to archive messaging from a topic
  */
 var communications = new vfosMessagingPubsub(broker, userName, domain, routingKeys);
-var Topic = "pt.vfos.channel.test";
+// console.log("the broker T is: " + broker);
+// communications.unregister();
+// var Topic = "pt.vfos.drivers";
 let listOfGettingMessages = [];
 
 
@@ -25,6 +26,11 @@ function messageHandler(msg) {
 	topic = msg.routingKey;
 	// pt.vfos.drivers.opc_ua.d1.s1
 	// console.log('topic ', topic);
+		      	  // console.log("***msg*** "+JSON.stringify(msg))
+	  if (topic.includes("alarm")){
+	          	  // console.log("***new alarm***");
+	          	  console.log("content: ***" + msg.content);
+
 	message = JSON.parse(msg.content);
 	/*
 	 * 
@@ -66,20 +72,10 @@ function messageHandler(msg) {
      comment: ""}])
   }
   
-  /*
-   body: JSON.stringify([{
-	 timestamp: message.timestamp,
-     status: "Detected",
-     code: 1,
-     type: 1,
-     machine: message._did,
-     company: "sis",
-     origin: "automatic"}])
-   */
-  
   request(options, function (err, answer) {
       console.log("answer:"+JSON.stringify(answer));
   });
+ }
 
 }
 

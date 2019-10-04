@@ -19,12 +19,15 @@ module.exports = {
             }
         })
     },
-    create: function (name, cb) {
+    create: function (id, name, cb) {
         let data = [{
+            id: id,
             name: name
         }];
         storage('POST', "/tables/machines/rows", data, function (error, response, body) {
             if (!error) {
+                console.log("error_machines: " + error)
+                console.log("response_machines: " + JSON.stringify(response))
                 cb(false, { message: "Machine is created" })
             } else {
                 cb(true, "Relational Storage Component not responding");

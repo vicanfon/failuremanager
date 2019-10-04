@@ -13,8 +13,8 @@ module.exports = {
   },
   create: function (req, res) {
     //body: {name,description}
-    if (req.body.name) {
-      dal.machines.create(req.body.name, function (err, answer) {
+    if (req.body.id && req.body.name) {
+      dal.machines.create(req.body.id, req.body.name, function (err, answer) {
         if (!err) {
           res.status(201).json(answer);
         } else {
