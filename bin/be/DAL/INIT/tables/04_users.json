@@ -2,6 +2,11 @@
     "columns":[
        {
           "allow_null":false,
+          "name":"password",
+          "size":100,
+          "type":"varchar"
+       },{
+          "allow_null":false,
           "name":"mail",
           "size":100,
           "type":"varchar"

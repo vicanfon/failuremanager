@@ -206,13 +206,15 @@ module.exports = {
                     mail: "mass",
                     name: "mass_administrator",
                     company: "mass",
-                    role: "mass"
+                    role: "mass",
+                    password: "vfos"
                 },
                 {
                     mail: "sis",
                     name: "sis_administrator",
                     company: "sis",
-                    role: "sis"
+                    role: "sis",
+                    password: "vfos"
                 }
             ])
         }

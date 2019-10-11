@@ -209,11 +209,11 @@ export class DataService {
     return this.http.get<User>(environment.apiUrl + '/users?mail=' + encodeURIComponent(mail));
   }
 
-  createUser(mail: string, name: string, role: string, company: string) {
+  createUser(mail: string, name: string, role: string, company: string, password: string) {
     return this.http.post(environment.apiUrl + '/users', { mail: mail, name: name, role: role, company: company });
   }
 
-  editUser(mail: string, name: string, role: string, company: string) {
+  editUser(mail: string, name: string, role: string, company: string, password: string) {
     return this.http.patch(environment.apiUrl + '/users?mail=' + mail,{
       mail: mail,
       name: name,
