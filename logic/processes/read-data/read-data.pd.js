@@ -24,7 +24,7 @@ let listOfGettingMessages = [];
 
 function messageHandler(msg) {
 	topic = msg.routingKey;
-	// pt.vfos.drivers.opc_ua.d1.s1
+	// pt.vfos.drivers.opc_ua.d1.alarm
 	// console.log('topic ', topic);
 		      	  // console.log("***msg*** "+JSON.stringify(msg))
 	  if (topic.includes("alarm")){
