@@ -14,5 +14,5 @@ LABEL vf-OS.name=failuremanager
 LABEL vf-OS.market.product=8
 LABEL vf-OS.version.major=1
 LABEL vf-OS.market.price=1
-LABEL vf-OS.version.version=7.1
+LABEL vf-OS.version.version=7.7
 CMD ["npm", "start"]

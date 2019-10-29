@@ -104,7 +104,7 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
   console.log('Listening on ' + bind);
-  console.log("vApp v6.8");
+  console.log("vApp v7.6");
   console.log("INIT DB...");
   init();
 }

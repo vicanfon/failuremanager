@@ -50,7 +50,8 @@ function messageHandler(msg) {
      company: "sis"
      origin: "automatic"
 	 */
-	// console.log("> messageHandler: msg.content = \"" + msg.content.toString() + "\"");
+	var fecha = new Date(message.timestamp);
+	console.log("Fecha :" + new Date(message.timestamp).toUTCString());
 	
 	  let options = {
     url: 'http://reverse-proxy/vfrelstorage/vfos/rel/1.0.5/databases/failuremanager/tables/alarms/rows',
@@ -62,7 +63,7 @@ function messageHandler(msg) {
 
     },
     body: JSON.stringify([{
-	 timestamp: message.timestamp,
+	 timestamp: new Date(message.timestamp).toUTCString(),
      status: "Detected",
      idalarmtype: message.data,
      idfailuretype: 0,
